@@ -1,0 +1,573 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="zh-CN"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>周荣宇 Mia | 过来人 Mentor Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .timeline-track::before {
+            content: '';
+            position: absolute;
+            left: 5.5px;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background-color: #F3F4F6;
+        }
+        .timeline-node {
+            position: relative;
+            z-index: 10;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #3525cd;
+            border: 3px solid #ffffff;
+            box-shadow: 0 0 0 1px #F3F4F6;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-fixed-dim": "#bdcabc",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#a0d2ab",
+                        "on-primary-container": "#ffffff",
+                        "on-background": "#1d1b1b",
+                        "surface-container-lowest": "#ffffff",
+                        surface: "#fef8f8",
+                        "on-secondary-fixed-variant": "#215031",
+                        background: "#fef8f8",
+                        "on-tertiary-fixed-variant": "#3e4a3f",
+                        "on-error": "#ffffff",
+                        "primary-container": "#887175",
+                        "inverse-surface": "#323030",
+                        "surface-container-high": "#ede7e6",
+                        "on-error-container": "#93000a",
+                        tertiary: "#556156",
+                        "surface-container-highest": "#e7e1e1",
+                        "surface-variant": "#e7e1e1",
+                        "on-surface": "#1d1b1b",
+                        "secondary-fixed": "#bbefc6",
+                        "primary-fixed": "#f8dbe0",
+                        "on-primary-fixed": "#27171b",
+                        "tertiary-container": "#6e7a6e",
+                        primary: "#6e595d",
+                        "inverse-primary": "#dbc0c4",
+                        "primary-fixed-dim": "#dbc0c4",
+                        "on-secondary-fixed": "#00210d",
+                        "inverse-on-surface": "#f6efef",
+                        "secondary-container": "#bbefc6",
+                        "on-secondary-container": "#406e4d",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#f3ecec",
+                        "on-tertiary-fixed": "#131e15",
+                        error: "#ba1a1a",
+                        "surface-bright": "#fef8f8",
+                        "surface-tint": "#6e595d",
+                        "on-tertiary-container": "#010602",
+                        "on-primary-fixed-variant": "#554245",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#4e4446",
+                        secondary: "#3a6848",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f9f2f2",
+                        "outline-variant": "#d2c3c5",
+                        "tertiary-fixed": "#d9e6d7",
+                        "surface-dim": "#dfd9d8",
+                        outline: "#807476",
+                        "canvas-bg": "#FAFAFA",
+                        "text-secondary": "#6B7280",
+                        "border-subtle": "#F3F4F6",
+                        "accent-blue-soft": "#EFF6FF",
+                        "status-error": "#EF4444"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        xl: "32px",
+                        md: "16px",
+                        "margin-mobile": "16px",
+                        xs: "4px",
+                        gutter: "16px",
+                        "margin-desktop": "24px",
+                        lg: "24px",
+                        base: "8px",
+                        sm: "8px",
+                        "section-gap": "6rem",
+                        "page-gutter": "1.5rem",
+                        "card-padding": "2rem",
+                        "module-gap": "1rem",
+                        "content-max-width": "1280px"
+                    },
+                    fontFamily: {
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "display-hero": ["Inter", "sans-serif"],
+                        "headline-section": ["Inter", "sans-serif"],
+                        "body-standard": ["Inter", "sans-serif"],
+                        "body-blockquote": ["Inter", "sans-serif"]
+                    },
+                    fontSize: {
+                        "headline-lg": ["32px", {
+                            lineHeight: "40px",
+                            fontWeight: "600"
+                        }],
+                        "body-md": ["14px", {
+                            lineHeight: "20px",
+                            fontWeight: "400"
+                        }],
+                        "label-md": ["12px", {
+                            lineHeight: "16px",
+                            letterSpacing: "0.5px",
+                            fontWeight: "500"
+                        }],
+                        "body-lg": ["16px", {
+                            lineHeight: "24px",
+                            fontWeight: "400"
+                        }],
+                        "headline-md": ["24px", {
+                            lineHeight: "32px",
+                            fontWeight: "600"
+                        }],
+                        "headline-section": ["24px", {
+                            lineHeight: "32px",
+                            fontWeight: "700"
+                        }],
+                        "body-blockquote": ["18px", {
+                            lineHeight: "28px",
+                            fontWeight: "500"
+                        }],
+                        "label-caps": ["12px", {
+                            lineHeight: "16px",
+                            letterSpacing: "0.05em",
+                            fontWeight: "600"
+                        }],
+                        caption: ["11px", {
+                            lineHeight: "14px",
+                            fontWeight: "400"
+                        }]
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body class="pt-20 bg-canvas-bg text-on-surface font-body-standard overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 left-0 right-0 z-50 border-b border-gray-100 h-20" style="background: rgba(255,255,255,0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);">
+  <div class="flex justify-between items-center w-full px-5 md:px-8 max-w-[1280px] mx-auto h-full">
+    <a href="../index.html" class="flex items-center gap-2 no-underline">
+      <svg fill="none" height="32" viewBox="0 0 32 32" width="32"><circle cx="16" cy="16" r="14" stroke="#02121d" stroke-width="2.5"/><path d="M10 14C10 14 11 12 12.5 12C14 12 15 14 15 14" stroke="#02121d" stroke-linecap="round" stroke-width="2"/><path d="M17 14C17 14 18 12 19.5 12C21 12 22 14 22 14" stroke="#02121d" stroke-linecap="round" stroke-width="2"/><path d="M11 20C11 20 12.5 22.5 16 22.5C19.5 22.5 21 20 21 20" stroke="#02121d" stroke-linecap="round" stroke-width="2.5"/></svg>
+      <span class="text-xl font-bold tracking-tight text-[#0A2540]">过来人Mentor</span>
+    </a>
+    <div class="hidden md:flex items-center gap-6">
+<a class="text-[13px] font-bold text-[#0A2540] hover:text-[#1d3a78] transition-colors uppercase tracking-wider no-underline" href="../index.html">Home</a>
+<a class="text-[13px] font-bold text-[#0A2540] hover:text-[#1d3a78] transition-colors uppercase tracking-wider no-underline" href="../about.html">About Us</a>
+<a class="text-[13px] font-bold text-[#1d3a78] border-b-2 border-[#1d3a78] pb-0.5 transition-colors uppercase tracking-wider no-underline" href="../platform.html">Our Mentors</a>
+<a class="text-[13px] font-bold text-[#0A2540] hover:text-[#1d3a78] transition-colors uppercase tracking-wider no-underline" href="../services.html">Services</a>
+<a class="text-[13px] font-bold text-[#0A2540] hover:text-[#1d3a78] transition-colors uppercase tracking-wider no-underline" href="../stories.html">Success Stories</a>
+<a class="text-[13px] font-bold text-[#0A2540] hover:text-[#1d3a78] transition-colors uppercase tracking-wider no-underline" href="../recruit.html">Become a Mentor</a>
+    </div>
+    <a href="../index.html" class="hidden md:inline-block bg-[#0A2540] text-white px-6 py-2.5 rounded-lg font-bold hover:opacity-90 transition-all active:scale-95 shadow-sm uppercase tracking-widest text-[11px] no-underline">Get Started</a>
+    <button class="md:hidden text-[#0A2540] p-2"><span class="material-symbols-outlined">menu</span></button>
+  </div>
+</nav>
+<!-- Header Badge Section -->
+<header class="pt-12 pb-6 text-center">
+<div class="mb-4"><a href="../platform.html" class="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-primary transition-colors"><span class="material-symbols-outlined text-[16px]">arrow_back</span>返回Mentor列表</a></div>
+<div class="inline-flex items-center gap-2 px-4 py-2 bg-accent-blue-soft text-primary rounded-full border border-primary/10 mb-4 animate-fade-in">
+<span class="material-symbols-outlined text-[18px]">workspace_premium</span>
+<span class="font-label-caps text-label-caps">过来人 MENTOR Profile</span>
+</div>
+</header>
+<main class="max-w-content-max-width mx-auto px-page-gutter pb-section-gap">
+<!-- Unified Profile & Academic Card -->
+<div class="bg-surface-container-lowest border border-border-subtle rounded-3xl shadow-sm overflow-hidden mb-12 transition-all duration-700 opacity-100 translate-y-0">
+<div class="grid grid-cols-1 md:grid-cols-10 items-stretch">
+<div class="md:col-span-4 p-8 border-r border-border-subtle/50 flex flex-col justify-between h-full bg-surface-container-low/30">
+<div class="flex flex-col h-full justify-between">
+<div class="flex-grow flex flex-col">
+<h1 class="font-headline-section text-headline-section text-on-surface mb-4">周荣宇 Mia</h1>
+<div class="relative w-4/5 mx-auto flex-grow overflow-hidden rounded-2xl group mb-6 bg-[#E5E7EB] aspect-[3/4]">
+<img alt="周荣宇 Mia Profile Picture" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="../images/mentors/b45af1f3b1e2.jpg">
+</div>
+</div>
+<div class="mt-auto">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant text-label-md font-medium rounded-full">梦校ED直达者</span>
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant text-label-md font-medium rounded-full">跨学科社科研究员</span>
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant text-label-md font-medium rounded-full">实干派</span>
+</div>
+<button class="w-full py-4 rounded-xl font-bold text-body-standard hover:bg-primary-container shadow-sm transition-all transform active:scale-98 shadow-inner border-b-2" style="background-color: rgb(45, 90, 39); color: rgb(255, 255, 255);">想和Mia聊聊</button>
+</div>
+</div></div>
+<div class="md:col-span-6 p-8 pb-8 pt-8 flex flex-col justify-between">
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<span class="text-3xl">📋</span>
+<h2 class="font-headline-section text-headline-section text-primary">学术背景 / My Background</h2>
+</div>
+<div class="mb-8">
+<h3 class="text-label-caps font-label-caps text-text-secondary mb-3">就读院校</h3>
+<div class="flex items-center gap-4 p-4 bg-accent-blue-soft text-primary border border-primary/10 rounded-xl"><div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center flex-shrink-0 shadow-sm"><img alt="Northwestern University Logo" class="h-6 w-6 object-contain" src="../images/logos/176bbbc93d6a.jpg"></div><div class="flex flex-col"><span class="font-bold text-body-standard">Northwestern University</span><span class="text-caption opacity-70">Linguistic Anthropology</span></div></div>
+</div>
+<div class="space-y-6 mb-8"><div class="grid grid-cols-1 md:grid-cols-12 gap-4 py-6 border-b border-border-subtle/50">
+<div class="md:col-span-2 flex items-center">
+<span class="px-2 py-1 bg-surface-container text-on-surface-variant text-label-caps rounded w-16 text-center">本科</span>
+</div>
+<div class="md:col-span-10 space-y-3">
+<div class="space-y-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-3">
+<span class="px-2 py-1 bg-surface-container text-on-surface-variant text-label-caps rounded w-24 text-center">转学前</span>
+<span class="px-3 py-1 bg-surface-container-low text-on-surface text-body-md font-medium rounded-lg border border-border-subtle/50">Tufts University [ Linguistic Anthropology ]</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-3">
+<span class="px-2 py-1 bg-surface-container text-on-surface-variant text-label-caps rounded w-24 text-center">目前就读</span>
+<span class="px-3 py-1 bg-surface-container-low text-primary text-body-md font-bold rounded-lg border border-border-subtle/50">Northwestern University [ Linguistic Anthropology ]</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="px-2 py-1 bg-surface-container text-on-surface-variant text-label-caps rounded w-24 text-center">获得 Offer</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-secondary/10 text-secondary text-body-md font-medium rounded-lg border border-secondary/20">Tufts</span>
+<span class="px-3 py-1 bg-secondary/10 text-secondary text-body-md font-medium rounded-lg border border-secondary/20">Vanderbilt</span>
+<span class="px-3 py-1 bg-secondary/10 text-secondary text-body-md font-medium rounded-lg border border-secondary/20">Cornell</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4 py-6 border-b border-border-subtle/50">
+<div class="md:col-span-2 flex items-center">
+<span class="px-2 py-1 bg-surface-container text-on-surface-variant text-label-caps rounded">硕士</span>
+</div>
+<div class="md:col-span-10">
+<div class="flex items-center gap-3"><span class="w-16 px-2 py-1 bg-surface-container text-on-surface-variant text-label-caps rounded text-center">就读</span><span class="text-body-md text-text-secondary/50 italic">待填写学校 &amp; 专业</span></div>
+<div class="flex items-center gap-3 mt-3"><span class="w-16 px-2 py-1 bg-surface-container text-on-surface-variant text-label-caps rounded text-center">获得 Offer</span><span class="text-body-md text-text-secondary/50 italic">待填写</span></div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4 py-6">
+<div class="md:col-span-2 flex items-center">
+<span class="px-2 py-1 bg-surface-container text-on-surface-variant text-label-caps rounded">博士</span>
+</div>
+<div class="md:col-span-10">
+<div class="flex items-center gap-3"><span class="w-16 px-2 py-1 bg-surface-container text-on-surface-variant text-label-caps rounded text-center">就读</span><span class="text-body-md text-text-secondary/50 italic">待填写学校 &amp; 专业</span></div>
+<div class="flex items-center gap-3 mt-3"><span class="w-16 px-2 py-1 bg-surface-container text-on-surface-variant text-label-caps rounded text-center">获得 Offer</span><span class="text-body-md text-text-secondary/50 italic">待填写</span></div>
+</div>
+</div></div>
+</div>
+</div>
+</div></div>
+<!-- Remaining Content -->
+<section class="space-y-section-gap">
+<div class="space-y-6 transition-all duration-700 opacity-100 translate-y-0">
+<div class="flex items-center gap-4">
+<span class="text-3xl">🤝</span>
+<h2 class="font-headline-section text-headline-section text-primary">我能帮你 / I Can Help With</h2>
+</div>
+<div class="bg-surface-container-lowest p-card-padding border border-border-subtle rounded-3xl shadow-sm space-y-8">
+<div class="space-y-3">
+<h3 class="text-body-md font-bold text-on-surface flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                            留学文书指导 (Essays &amp; Personal Statements)
+                        </h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-accent-blue-soft text-primary text-body-md font-medium rounded-lg border border-primary/10">文书头脑风暴</span>
+<span class="px-3 py-1 bg-accent-blue-soft text-primary text-body-md font-medium rounded-lg border border-primary/10">文书逻辑修改</span>
+<span class="px-3 py-1 bg-accent-blue-soft text-primary text-body-md font-medium rounded-lg border border-primary/10">文书逐字润色</span>
+</div>
+</div>
+<div class="space-y-3">
+<h3 class="text-body-md font-bold text-on-surface flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                            学术与选课规划 (Academic Planning)
+                        </h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-secondary/10 text-secondary text-body-md font-medium rounded-lg border border-secondary/20">选课与转学分规划</span>
+<span class="px-3 py-1 bg-secondary/10 text-secondary text-body-md font-medium rounded-lg border border-secondary/20">GPA提升策略</span>
+<span class="px-3 py-1 bg-secondary/10 text-secondary text-body-md font-medium rounded-lg border border-secondary/20">教授沟通长线推荐信</span>
+</div>
+</div>
+<div class="space-y-3">
+<h3 class="text-body-md font-bold text-on-surface flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+                            背景与活动提升 (Profile Building)
+                        </h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant text-body-md font-medium rounded-lg border border-border-subtle">科研项目规划</span><span class="px-3 py-1 bg-surface-container text-on-surface-variant text-body-md font-medium rounded-lg border border-border-subtle">office hour技巧</span>
+</div>
+</div>
+<div class="space-y-3">
+<h3 class="text-body-md font-bold text-on-surface flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                            综合咨询 (Mentorship &amp; Strategy)
+                        </h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant text-body-md font-medium rounded-lg border border-primary/10">选校定位诊断</span>
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant text-body-md font-medium rounded-lg border border-primary/10">Kpop/摄影/戏剧等课外活动规划</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 02: Turning Point -->
+<div class="space-y-6 transition-all duration-700 opacity-100 translate-y-0">
+<div class="flex items-center gap-4">
+<span class="text-3xl">💡</span>
+<h2 class="font-headline-section text-headline-section text-primary">关于我 / About me</h2>
+</div>
+<div class="bg-white rounded-3xl shadow-sm border border-border-subtle overflow-hidden">
+<!-- Tab Bar -->
+<div class="grid grid-cols-3">
+<!-- Tab 1 (Active) -->
+<button class="relative h-24 flex-1 bg-white transition-all border-r border-border-subtle/50">
+<div class="absolute inset-0 flex flex-col items-center justify-center p-2">
+<span class="material-symbols-outlined text-primary mb-1">lightbulb</span>
+<span class="text-primary text-label-caps font-bold text-center">我的来时路 / My Journey</span>
+<div class="absolute bottom-0 left-0 w-full h-1 rounded-t-full bg-primary-container"></div>
+</div>
+</button>
+<!-- Tab 2 (Inactive) -->
+<button class="relative h-24 flex-1 bg-accent-blue-soft/30 border-b border-r border-border-subtle/50 opacity-70 hover:opacity-100 transition-all bg-surface-container shadow-inner border-b-2">
+<div class="absolute inset-0 flex flex-col items-center justify-center p-2">
+<span class="material-symbols-outlined text-on-surface-variant mb-1">school</span>
+<span class="text-on-surface-variant text-label-caps font-bold text-center">为什么我要做导师 / Why I Coach</span>
+</div>
+</button>
+<!-- Tab 3 (Inactive) -->
+<button class="relative h-24 flex-1 bg-accent-blue-soft/30 border-b border-border-subtle/50 opacity-70 hover:opacity-100 transition-all bg-surface-container shadow-inner border-b-2">
+<div class="absolute inset-0 flex flex-col items-center justify-center p-2">
+<span class="material-symbols-outlined text-on-surface-variant mb-1">celebration</span>
+<span class="text-on-surface-variant text-label-caps font-bold text-center">我的小趣事 / Fun Fact of Me</span>
+</div>
+</button>
+</div>
+<!-- Content Area -->
+<div class="grid grid-cols-1 md:grid-cols-10 gap-8 p-8">
+<!-- Left Column (40%) -->
+<div class="md:col-span-4">
+<div class="rounded-2xl overflow-hidden shadow-md h-full bg-[#F3F4F6]">
+<img alt="Mia Portrait" class="w-full h-full object-cover" src="../images/mentors/3a6efb364542.jpg">
+</div>
+</div>
+<!-- Right Column (60%) -->
+<div class="md:col-span-6 space-y-6">
+<div class="space-y-4 text-on-surface leading-relaxed">
+<p class=""></p><div class="text-lg font-bold">Hi 我是Mia！</div>高中就读于北京十一学校，高三早申西北大学被拒成了我心中一直燃着的火焰。入读 Tufts University 的第一天起，我就是带着“我要转学去西北”的清晰目标开始规划的。我的学术热忱在于语言人类学，这源于我姥姥独特的移民口音系统以及我高中时跟随西北大学教授做的口述历史研究。<p class=""></p>
+<div class="p-6 bg-[#FFFDF2] border-l-4 border-[#FFD700] rounded-r-xl italic font-medium">
+<span class="block font-bold mb-2 not-italic text-primary">为什么 Tufts 留不住我？</span>
+<p class="text-on-surface-variant">因为 Tufts 无法提供我想要的学术集中方向（Concentration）。学校的人类学分支唯独缺失了“语言人类学”。尽管大一时我保持了 4.0 的满分 GPA，并跨专业在语言学和音乐学系做助研，但没有就是没有。</p>
+</div>
+<p class="">在转学申请中，我摒弃了本科申请时花里胡哨的风格，将文书重心牢牢放在“为什么原学校无法满足我，而新学校可以”的硬核逻辑上。同时，我精准锁定了西北大学一个可以面向全芝加哥播放的 Podcast 社团——这种庞大的媒体调性是传统学术名校无法提供的。最终，全方位的精准匹配让我成功在转学早申中一举圆梦西北。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 03: Challenges -->
+<div class="space-y-6 transition-all duration-700 opacity-100 translate-y-0">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-3xl text-primary">error</span>
+<h2 class="font-headline-section text-headline-section text-primary">我也曾面临挑战 / Challenges Confronted</h2>
+</div>
+<div class="bg-surface-container-lowest p-card-padding border border-border-subtle rounded-3xl shadow-sm space-y-4"><div class="space-y-8">
+<!-- Pair 1 -->
+<div class="relative flex flex-col md:flex-row gap-4 items-stretch">
+<div class="md:w-[45%] bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-border-subtle/50 flex flex-col">
+<div class="mb-4"><span class="px-2 py-1 bg-surface-container-low text-on-surface-variant text-label-caps rounded font-bold">Challenges Confronted</span></div>
+<p class="text-body-standard text-on-surface"><span class="font-bold bg-[#FFF5F5] px-1 rounded">早申梦校被拒的落差</span> —— 高三早申西北大学被 deferred 后最终遭遇 reject，带着对梦校“跨学科与务实氛围”的淡淡不甘进入大一。</p>
+</div>
+<div class="md:w-[55%] bg-white p-6 rounded-2xl shadow-sm border border-[#065F46] flex flex-col">
+<div class="flex items-center gap-2 mb-3 text-[#065F46]">
+<span class="material-symbols-outlined">check_circle</span>
+<span class="font-bold">The Breakthrough</span>
+<div class="bg-[#FFB800] text-white font-bold px-2 py-0.5 rounded-full text-[10px] shadow-sm ml-2">BUT!</div></div>
+<p class="text-body-standard text-on-surface"><span class="font-bold bg-[#F0FDF4] px-1 rounded">那就去西北的对岸！</span> —— 大一保持 4.0 满分 GPA，精准死磕转学策略，全方位匹配，最终早申一举圆梦西北！</p>
+</div>
+</div>
+<!-- Pair 2 -->
+<div class="relative flex flex-col md:flex-row gap-4 items-stretch">
+<div class="md:w-[45%] bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-border-subtle/50 flex flex-col">
+<div class="mb-4"><span class="px-2 py-1 bg-surface-container-low text-on-surface-variant text-label-caps rounded font-bold">Challenges Confronted</span></div>
+<p class="text-body-standard text-on-surface"><span class="font-bold bg-[#FFF5F5] px-1 rounded">跨文化叙事的断层原学校专业资源的完全断层</span> —— 进入 Tufts 后发现学校完全没有分出“语言人类学”这一细分方向，只提供文化、生物人类学和考古，学术野心无法被满足</p>
+</div>
+<div class="md:w-[55%] bg-white p-6 rounded-2xl shadow-sm border border-[#065F46] flex flex-col">
+<div class="flex items-center gap-2 mb-3 text-[#065F46]">
+<span class="material-symbols-outlined">check_circle</span>
+<span class="font-bold">The Breakthrough</span>
+<div class="bg-[#FFB800] text-white font-bold px-2 py-0.5 rounded-full text-[10px] shadow-sm ml-2">BUT!</div></div>
+<p class="text-body-standard text-on-surface"><span class="font-bold bg-[#F0FDF4] px-1 rounded">没有资源，就自己创造资源！</span> —— 跨专业在语言学和音乐学系做助研、创立面向全芝加哥播放的 Podcast 社团，用独特的跨学科背景反哺申请文书。</p>
+</div>
+</div>
+<!-- Pair 3 -->
+<div class="relative flex flex-col md:flex-row gap-4 items-stretch">
+<div class="md:w-[45%] bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-border-subtle/50 flex flex-col">
+<div class="mb-4"><span class="px-2 py-1 bg-surface-container-low text-on-surface-variant text-label-caps rounded font-bold">Challenges Confronted</span></div>
+<p class="text-body-standard text-on-surface"><span class="font-bold bg-[#FFF5F5] px-1 rounded">转学文书创作者的心态博弈</span> —— 曾一度死磕本科风格的 Creative 文书而自我怀疑，在与中介反复碰撞后才痛苦扭转思维，打破对 Personal Statement 的传统刻板认知。</p>
+</div>
+<div class="md:w-[55%] bg-white p-6 rounded-2xl shadow-sm border border-[#065F46] flex flex-col">
+<div class="flex items-center gap-2 mb-3 text-[#065F46]">
+<span class="material-symbols-outlined">check_circle</span>
+<span class="font-bold">The Breakthrough</span>
+<div class="bg-[#FFB800] text-white font-bold px-2 py-0.5 rounded-full text-[10px] shadow-sm ml-2">BUT!</div></div>
+<p class="text-body-standard text-on-surface"><span class="font-bold bg-[#F0FDF4] px-1 rounded">打破伪痛点，升级硬核逻辑！</span> —— 摒弃花里胡哨，将重心牢牢放在“为什么原学校无法满足我，而新学校可以”的降维逻辑上。</p>
+</div>
+</div>
+</div></div>
+</div>
+<!-- Section 04: My Track Record -->
+<div class="space-y-6 transition-all duration-700 opacity-100 translate-y-0">
+<div class="flex items-center gap-4"><span class="text-3xl">📋</span><h2 class="font-headline-section text-headline-section text-primary">我的战绩 / My Track Record</h2></div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="group relative p-8 bg-[#FFFDF2] border border-[#FFD700]/30 rounded-2xl hover:shadow-md transition-all overflow-hidden"><div class="flex flex-col gap-2 mb-6"><div class="inline-flex w-fit px-2 py-0.5 bg-[#F9EAEB] text-[#8A6064] text-[10px] font-bold rounded-full border border-[#8A6064]/10">成就 01</div><h4 class="text-lg font-semibold text-primary leading-tight">连续两年满绩 ➔ GPA 4.0 / 4.0</h4></div><div class="absolute -top-2 -right-2 w-16 h-16 opacity-20 rotate-12 pointer-events-none"><span class="material-symbols-outlined text-[#FFB800] text-6xl">verified</span></div><div class="space-y-4"><p class="text-body-standard text-text-secondary leading-relaxed">我在严苛的学术给分体系下，连续两年保持全科满绩。不仅证明了极强的学术适应力，也摸透了名校教授的拿分与期末考核逻辑。</p></div></div>
+<div class="group relative p-8 bg-[#FFFDF2] border border-[#FFD700]/30 rounded-2xl hover:shadow-md transition-all overflow-hidden"><div class="flex flex-col gap-2 mb-6"><div class="inline-flex w-fit px-2 py-0.5 bg-[#F9EAEB] text-[#8A6064] text-[10px] font-bold rounded-full border border-[#8A6064]/10">成就 02</div><h4 class="text-lg font-semibold text-primary leading-tight">Pioneer 学术科研 ➔ 与西北大学教授科研</h4></div><div class="absolute -top-2 -right-2 w-16 h-16 opacity-20 rotate-12 pointer-events-none"><span class="material-symbols-outlined text-[#FFB800] text-6xl">verified</span></div><div class="space-y-4"><p class="text-body-standard text-text-secondary leading-relaxed">入选高含金量 Pioneer 研究项目。在西北大学终身教授的直接指导下独立开展课题，获得一封极具学术分量的顶级推荐信。</p></div></div>
+<div class="group relative p-8 bg-[#FFFDF2] border border-[#FFD700]/30 rounded-2xl hover:shadow-md transition-all overflow-hidden"><div class="flex flex-col gap-2 mb-6"><div class="inline-flex w-fit px-2 py-0.5 bg-[#F9EAEB] text-[#8A6064] text-[10px] font-bold rounded-full border border-[#8A6064]/10">成就 03</div><h4 class="text-lg font-semibold text-primary leading-tight">两段核心学术助理 ➔ Research Assistant (RA)</h4></div><div class="absolute -top-2 -right-2 w-16 h-16 opacity-20 rotate-12 pointer-events-none"><span class="material-symbols-outlined text-[#FFB800] text-6xl">verified</span></div><div class="space-y-4"><p class="text-body-standard text-text-secondary leading-relaxed">深度参与两段高强度学术课题，协助教授处理核心数据建模与文献综述，具备独立驾驭跨学科、冷门交叉学科科研的底层能力。</p></div></div>
+</div>
+</div>
+<!-- Section 05: Student Offers -->
+<div class="space-y-6 transition-all duration-700 opacity-100 translate-y-0 mt-12">
+<div class="flex items-center gap-4">
+<span class="text-3xl">✨</span>
+<h2 class="font-headline-section text-headline-section text-primary">学生录取成果 / My students‘ offers</h2>
+</div>
+<div class="bg-surface-container-lowest p-card-padding border border-border-subtle rounded-3xl shadow-sm">
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-2 bg-surface-container text-on-surface-variant text-body-md font-medium rounded-full">Harvard University</span>
+<span class="px-4 py-2 bg-surface-container text-on-surface-variant text-body-md font-medium rounded-full">Stanford University</span>
+<span class="px-4 py-2 bg-surface-container text-on-surface-variant text-body-md font-medium rounded-full">UPenn</span>
+<span class="px-4 py-2 bg-surface-container text-on-surface-variant text-body-md font-medium rounded-full">Cornell University</span>
+<span class="px-4 py-2 bg-surface-container text-on-surface-variant text-body-md font-medium rounded-full">UC Berkeley</span>
+<span class="px-4 py-2 bg-surface-container text-on-surface-variant text-body-md font-medium rounded-full">UCLA</span>
+<span class="px-4 py-2 bg-surface-container text-on-surface-variant text-body-md font-medium rounded-full">NYU</span>
+</div>
+</div><div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Card 1: Student C -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-2xl p-card-padding shadow-sm space-y-4 relative overflow-hidden">
+<div class="flex justify-between items-start mb-2">
+<span class="bg-[#F5E6E8] text-[#8B5E66] rounded px-2 py-1 text-label-md font-bold">学生 Emma</span>
+<div class="text-[12px] font-medium text-text-secondary/50 tracking-tighter font-mono">[ CASE_01 ]</div>
+</div>
+<div class="space-y-4">
+<h4 class="text-lg font-bold text-primary">大型公立大学 ➔ Top 15 圣路易斯华盛顿大学</h4>
+<p class="text-body-md text-on-surface-variant leading-relaxed">在公立大课、科研经历一片空白的困境下，通过全程套磁与长线规划，硬生生卡下一个极其珍贵的跨学科科研助理（RA）席位。</p>
+<div class="flex items-center flex-wrap gap-3">
+<span class="text-body-md font-bold text-on-surface">录取结果：</span>
+<div class="flex flex-wrap gap-2">
+<span class="bg-[#E8F1E9] text-[#4A6741] rounded-full px-3 py-1 text-body-md font-bold">WashU</span>
+<span class="bg-[#E8F1E9] text-[#4A6741] rounded-full px-3 py-1 text-body-md font-bold">Vanderbilt</span>
+<span class="bg-[#E8F1E9] text-[#4A6741] rounded-full px-3 py-1 text-body-md font-bold">Emory</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2: Student D -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-2xl p-card-padding shadow-sm space-y-4 relative overflow-hidden">
+<div class="flex justify-between items-start mb-2">
+<span class="bg-[#F5E6E8] text-[#8B5E66] rounded px-2 py-1 text-label-md font-bold">学生 Molly</span>
+<div class="text-[12px] font-medium text-text-secondary/50 tracking-tighter font-mono">[ CASE_02 ]</div>
+</div>
+<div class="space-y-4">
+<h4 class="text-lg font-bold text-primary">美本 Top 30 ➔ 常春藤 康奈尔大学</h4>
+<p class="text-body-md text-on-surface-variant leading-relaxed">手握 3.9+ 高分却遭申本拒信，我们彻底剥离其浮夸的文书风格，死磕官网隐藏资源，重塑出真诚、成熟的学者形象。</p>
+<div class="flex items-center flex-wrap gap-3">
+<span class="text-body-md font-bold text-on-surface">录取结果：</span>
+<div class="flex flex-wrap gap-2">
+<span class="bg-[#E8F1E9] text-[#4A6741] rounded-full px-3 py-1 text-body-md font-bold">Cornell</span>
+<span class="bg-[#E8F1E9] text-[#4A6741] rounded-full px-3 py-1 text-body-md font-bold">UPenn</span>
+<span class="bg-[#E8F1E9] text-[#4A6741] rounded-full px-3 py-1 text-body-md font-bold">Columbia</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 06: Student Feedback -->
+<div class="space-y-6 transition-all duration-700 opacity-100 translate-y-0 mt-section-gap">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<span class="text-3xl">💬</span>
+<h2 class="font-headline-section text-headline-section text-primary">学生反馈 / Students reviews</h2>
+</div>
+<a class="text-body-md font-medium text-primary hover:underline" href="#">查看全部评价</a>
+</div>
+<div class="bg-surface-container-lowest p-card-padding border border-border-subtle rounded-3xl shadow-sm">
+<div class="flex flex-col gap-6">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant">person</span>
+</div>
+<div class="flex-1">
+<div class="flex flex-wrap items-center gap-2 mb-2">
+<span class="font-bold text-on-surface">匿名学员</span>
+<div class="flex text-[#FFB800]">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+<span class="text-body-md font-medium text-on-surface">5.0</span>
+<span class="text-caption text-text-secondary ml-auto">2026年4月</span>
+</div>
+<p class="text-body-standard text-on-surface leading-relaxed">学姐在转学规划上非常专业，尤其是在挖掘我个人特质和联系教授推荐信方面给了我极大的启发。在她的指导下，我成功拿到了理想大校的录取。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container border-t border-border-subtle">
+<div class="flex flex-col md:flex-row justify-between items-center px-page-gutter py-12 max-w-content-max-width mx-auto">
+<div class="mb-6 md:mb-0">
+<div class="font-display-hero text-body-standard text-primary mb-2">Mentor Academy</div>
+<p class="font-caption text-caption text-text-secondary">© Mentor Academy. 版权所有。</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-text-secondary font-caption text-caption hover:text-secondary transition-colors" href="#">服务条款</a>
+<a class="text-text-secondary font-caption text-caption hover:text-secondary transition-colors" href="#">隐私政策</a>
+<a class="text-text-secondary font-caption text-caption hover:text-secondary transition-colors" href="#">Cookie 政策</a>
+<a class="text-text-secondary font-caption text-caption hover:text-secondary transition-colors" href="#">技术支持</a>
+</div>
+</div>
+</footer>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('section > div, .mb-12').forEach(el => {
+                el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+                observer.observe(el);
+            });
+        });
+    </script>
+</body></html>

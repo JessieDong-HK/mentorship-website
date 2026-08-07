@@ -1,0 +1,447 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>About Us | Your Admissions Mentor</title>
+<meta content="Learn about the team and story behind Your Admissions Mentor." name="description">
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Design System Configuration -->
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-secondary-container": "#0f4a86", "secondary-fixed-dim": "#a6c8ff", "surface-dim": "#dadadb", "surface-container-high": "#e9e8e9", background: "#faf9fa", "on-secondary-fixed-variant": "#094784", "outline-variant": "#c2c7cf", "on-secondary": "#ffffff", "secondary-fixed": "#d5e3ff", "on-tertiary-fixed-variant": "#59431e", "surface-bright": "#faf9fa", "surface-container-highest": "#e3e2e3", "surface-container": "#eeedee", "on-error": "#ffffff", "on-tertiary": "#ffffff", "on-secondary-fixed": "#001c3b", "on-primary-fixed-variant": "#2f4c49", "tertiary-fixed-dim": "#e1c292", "inverse-surface": "#2f3032", "error-container": "#ffdad6", "surface-tint": "#476460", "on-surface": "#1a1c1d", "on-primary": "#ffffff", tertiary: "#725b33", "primary-container": "#b3d2cd", "on-primary-container": "#3e5b58", "primary-fixed": "#c9e9e4", surface: "#faf9fa", "surface-variant": "#e3e2e3", "inverse-primary": "#aecdc8", secondary: "#2e5f9d", error: "#ba1a1a", "primary-fixed-dim": "#aecdc8", "secondary-container": "#8ebbff", "tertiary-container": "#e7c797", "surface-container-lowest": "#ffffff", outline: "#72777f", "on-error-container": "#93000a", primary: "#476460", "on-background": "#1a1c1d", "on-surface-variant": "#42474e", "tertiary-fixed": "#ffdeac", "on-tertiary-container": "#69522c", "inverse-on-surface": "#f1f0f1", "on-tertiary-fixed": "#281900", "on-primary-fixed": "#02201d", "surface-container-low": "#f4f3f4"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {"stack-sm": "8px", "margin-mobile": "20px", "stack-lg": "64px", "section-padding": "120px", "container-max": "1280px", gutter: "32px", "stack-md": "24px"}, fontFamily: {"display-lg": ["Libre Caslon Text"], button: ["Inter"], "label-caps": ["Inter"], "body-md": ["Inter"], "display-lg-mobile": ["Libre Caslon Text"], "headline-sm": ["Libre Caslon Text"], "headline-md": ["Libre Caslon Text"], "body-lg": ["Inter"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Inter"]}, fontSize: {"display-lg": ["64px", {lineHeight: "72px", letterSpacing: "-0.02em", fontWeight: "700"}], button: ["14px", {lineHeight: "20px", fontWeight: "600"}], "label-caps": ["12px", {lineHeight: "16px", letterSpacing: "0.1em", fontWeight: "600"}], "body-md": ["16px", {lineHeight: "24px", fontWeight: "400"}], "display-lg-mobile": ["40px", {lineHeight: "48px", letterSpacing: "-0.01em", fontWeight: "700"}], "headline-sm": ["24px", {lineHeight: "32px", fontWeight: "600"}], "headline-md": ["32px", {lineHeight: "40px", fontWeight: "600"}], "body-lg": ["18px", {lineHeight: "28px", fontWeight: "400"}]}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .soft-shadow {
+            box-shadow: 0 10px 40px -15px rgba(0, 0, 0, 0.05);
+        }
+        .founder-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .founder-card.expanded {
+            background-color: white !important;
+            border-color: rgba(71, 100, 96, 0.2) !important;
+        }
+        .marshmallow-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.08);
+        }
+        @keyframes sparkle-float {
+            0%, 100% { transform: translateY(0) rotate(0); opacity: 1; }
+            50% { transform: translateY(-5px) rotate(15deg); opacity: 0.7; }
+        }
+        .animate-sparkle {
+            animation: sparkle-float 2s ease-in-out infinite;
+        }
+        .mask-edge-left {
+            mask-image: linear-gradient(to right, transparent, black 20%);
+        }
+        .mask-edge-right {
+            mask-image: linear-gradient(to left, transparent, black 20%);
+        }
+        .roadmap-path {
+            stroke-dasharray: 2000;
+            stroke-dashoffset: 2000;
+            animation: draw-path 4s ease-out forwards;
+        }
+        @keyframes draw-path {
+            to { stroke-dashoffset: 0; }
+        }
+        .float-node {
+            animation: float-node 6s ease-in-out infinite;
+        }
+        @keyframes float-node {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+    </style>
+</head><body class="bg-background text-on-surface font-body-md selection:bg-secondary-container">
+<!-- TopAppBar -->
+<nav class="fixed top-0 left-0 right-0 z-50 border-b border-gray-100 h-20" style="background: rgba(255,255,255,0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);">
+  <div class="flex justify-between items-center w-full px-5 md:px-8 max-w-[1280px] mx-auto h-full">
+    <a href="index.html" class="flex items-center gap-2 no-underline">
+      <svg fill="none" height="32" viewBox="0 0 32 32" width="32"><circle cx="16" cy="16" r="14" stroke="#02121d" stroke-width="2.5"/><path d="M10 14C10 14 11 12 12.5 12C14 12 15 14 15 14" stroke="#02121d" stroke-linecap="round" stroke-width="2"/><path d="M17 14C17 14 18 12 19.5 12C21 12 22 14 22 14" stroke="#02121d" stroke-linecap="round" stroke-width="2"/><path d="M11 20C11 20 12.5 22.5 16 22.5C19.5 22.5 21 20 21 20" stroke="#02121d" stroke-linecap="round" stroke-width="2.5"/></svg>
+      <span class="text-xl font-bold tracking-tight text-[#0A2540]">过来人Mentor</span>
+    </a>
+    <div class="hidden md:flex items-center gap-6">
+<a class="text-[13px] font-bold text-[#0A2540] hover:text-[#1d3a78] transition-colors uppercase tracking-wider no-underline" href="index.html">Home</a>
+<a class="text-[13px] font-bold text-[#1d3a78] border-b-2 border-[#1d3a78] pb-0.5 transition-colors uppercase tracking-wider no-underline" href="about.html">About Us</a>
+<a class="text-[13px] font-bold text-[#0A2540] hover:text-[#1d3a78] transition-colors uppercase tracking-wider no-underline" href="platform.html">Our Mentors</a>
+<a class="text-[13px] font-bold text-[#0A2540] hover:text-[#1d3a78] transition-colors uppercase tracking-wider no-underline" href="services.html">Services</a>
+<a class="text-[13px] font-bold text-[#0A2540] hover:text-[#1d3a78] transition-colors uppercase tracking-wider no-underline" href="stories.html">Success Stories</a>
+<a class="text-[13px] font-bold text-[#0A2540] hover:text-[#1d3a78] transition-colors uppercase tracking-wider no-underline" href="recruit.html">Become a Mentor</a>
+    </div>
+    <a href="index.html" class="hidden md:inline-block bg-[#0A2540] text-white px-6 py-2.5 rounded-lg font-bold hover:opacity-90 transition-all active:scale-95 shadow-sm uppercase tracking-widest text-[11px] no-underline">Get Started</a>
+    <button class="md:hidden text-[#0A2540] p-2"><span class="material-symbols-outlined">menu</span></button>
+  </div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-24 pb-stack-lg px-margin-mobile md:px-8 max-w-[1440px] mx-auto text-center overflow-hidden">
+<div class="absolute inset-0 bg-white -z-10"></div>
+<div class="max-w-container-max mx-auto relative flex items-center justify-center min-h-[600px] py-20">
+<!-- Left Mentor Wall -->
+<div class="absolute left-0 top-1/2 -translate-y-1/2 w-1/4 hidden lg:grid grid-cols-2 gap-4 mask-edge-right opacity-80">
+<div class="space-y-4">
+<div class="w-full aspect-square rounded-2xl overflow-hidden shadow-sm">
+<img alt="Mentor" class="w-full h-full object-cover" src="images/assets/14fe5df8cb50.jpg">
+</div>
+<div class="w-full aspect-square rounded-2xl overflow-hidden shadow-sm blur-[1px] opacity-60">
+<img alt="Mentor" class="w-full h-full object-cover" src="images/assets/1c6facca3590.jpg">
+</div>
+<div class="w-full aspect-square rounded-2xl overflow-hidden shadow-sm blur-[2px] opacity-30">
+<img alt="Mentor" class="w-full h-full object-cover" src="images/assets/5721974a1975.jpg">
+</div>
+</div>
+<div class="space-y-4 mt-8">
+<div class="w-full aspect-square rounded-2xl overflow-hidden shadow-sm">
+<img alt="Mentor" class="w-full h-full object-cover" src="images/assets/c5a7724a6468.jpg">
+</div>
+<div class="w-full aspect-square rounded-2xl overflow-hidden shadow-sm blur-[1px] opacity-60">
+<img alt="Mentor" class="w-full h-full object-cover" src="images/assets/172cd6be106f.jpg">
+</div>
+</div>
+</div>
+<!-- Central Text Container -->
+<div class="relative z-10 max-w-2xl px-6 text-center">
+<p class="font-bold text-on-surface-variant uppercase tracking-widest mb-6 text-sm opacity-80">正式做个自我介绍</p>
+<h1 class="font-headline-xl text-[40px] md:text-[56px] text-primary leading-tight font-extrabold mb-12" style="font-family: Lexend; color: rgb(0, 35, 95);">我们是目前中国最大的<br>Mentorship Platform！</h1><span class="absolute -bottom-4 -right-10 rotate-12 text-4xl opacity-80">🎓</span>
+</div>
+<!-- Right Mentor Wall -->
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-1/4 hidden lg:grid grid-cols-2 gap-4 mask-edge-left opacity-80">
+<div class="space-y-4 mt-8">
+<div class="w-full aspect-square rounded-2xl overflow-hidden shadow-sm">
+<img alt="Mentor" class="w-full h-full object-cover" src="images/assets/a394ef5137a2.jpg">
+</div>
+<div class="w-full aspect-square rounded-2xl overflow-hidden shadow-sm blur-[1px] opacity-60">
+<img alt="Mentor" class="w-full h-full object-cover" src="images/assets/cf039cf46e86.jpg">
+</div>
+</div>
+<div class="space-y-4">
+<div class="w-full aspect-square rounded-2xl overflow-hidden shadow-sm">
+<img alt="Mentor" class="w-full h-full object-cover" src="images/assets/77ca566a1de1.jpg">
+</div>
+<div class="w-full aspect-square rounded-2xl overflow-hidden shadow-sm blur-[1px] opacity-60">
+<img alt="Mentor" class="w-full h-full object-cover" src="images/assets/1c6facca3590.jpg">
+</div>
+<div class="w-full aspect-square rounded-2xl overflow-hidden shadow-sm blur-[2px] opacity-30">
+<img alt="Mentor" class="w-full h-full object-cover" src="images/assets/14fe5df8cb50.jpg">
+</div>
+</div>
+</div>
+</div></section>
+<!-- Narrative Roadmap Section -->
+<section class="relative py-section-padding bg-surface-container-low overflow-hidden"><!-- Visual Roadmap Line -->
+<div class="absolute inset-0 pointer-events-none flex justify-center">
+<img alt="Cartoon road path" class="w-full h-full object-cover opacity-20 blur-[1px]" src="images/assets/2dc62df952c8.jpg">
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-8 relative z-10">
+<div class="text-center md:max-w-3xl mx-auto mb-24 relative">
+<div class="absolute -top-12 -left-8 w-24 h-24 opacity-60 animate-sparkle">
+<img alt="Book doodle" class="w-full h-full object-contain" src="images/assets/438008af3a33.jpg">
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-[1.8] opacity-90">
+<span class="bg-secondary-container/40 px-6 py-2 rounded-full inline-block shadow-sm border border-secondary/10">探索我们建设这个平台的最终奥义</span>
+</p>
+</div>
+<div class="space-y-stack-lg md:space-y-48">
+<!-- Node 01 -->
+<div class="grid grid-cols-1 md:grid-cols-12 items-center gap-12">
+<div class="md:col-span-6 order-2 md:order-1 flex justify-center relative">
+<div class="relative w-full max-w-md float-node">
+<div class="absolute -inset-4 bg-secondary/5 rounded-xl -rotate-2"></div>
+<img alt="Mentor at library" class="w-full aspect-[4/5] object-cover rounded-[40px] shadow-2xl border border-surface-container-highest relative z-10" src="images/mentors/18f5f029eb47.jpg">
+<!-- Overlapping New Photo -->
+<div class="absolute -bottom-12 -right-10 w-48 aspect-square rounded-2xl overflow-hidden shadow-xl border-4 border-white rotate-6 z-20 scale-125">
+<img alt="Mentor and student" class="w-full h-full object-cover" src="images/mentors/ffd549f6a1e8.jpg">
+</div>
+</div>
+</div>
+<div class="md:col-span-5 md:col-start-8 order-1 md:order-2 flex flex-col items-start gap-6">
+<div class="bg-secondary/10 text-secondary rounded-full px-4 py-1 font-label-caps text-label-caps border border-secondary/20 shadow-sm">NODE 01</div>
+<h3 class="text-headline-md font-bold text-primary leading-tight">想快速成长，最好的捷径就是“偷师”！</h3>
+<p class="text-body-md text-on-surface-variant leading-relaxed">人生的路从来不止一条，成功这事也没有标准答案！看看别人是怎么做到的，直接去和有经验的人聊聊。</p>
+<div class="text-body-md text-on-surface-variant leading-relaxed">我们想做的，就是帮大家把这些信息壁垒给打通，少走点弯路，带大家以最快的速度一起成长！</div>
+</div>
+</div>
+<!-- Node 02 -->
+<div class="grid grid-cols-1 md:grid-cols-12 items-center gap-12">
+<div class="md:col-span-5 md:col-start-1 flex flex-col items-start gap-6">
+<div class="bg-tertiary-container/40 text-tertiary rounded-full px-4 py-1 font-label-caps text-label-caps border border-tertiary/20 shadow-sm">NODE 02</div>
+<h3 class="text-headline-md font-bold text-primary leading-tight">关于【性价比】</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-[1.8]">我们从花了大钱找终结的同学口中得知：整个申请里最管用、最值得的，其实就是中介为他们匹配到的梦校学长学姐。</p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-[1.8]">凭什么这么好的经验只能被少数人垄断？我们就是要打破这个壁垒！我们的目的就是让你窃取到和几十万中介一模一样的核心收获。 让信息流动起来，让大家都拥有同样的起跑线。</p>
+</div>
+<div class="md:col-span-6 md:col-start-7 flex justify-center relative">
+<div class="relative w-full max-w-md float-node" style="animation-delay: -3s;">
+<div class="absolute -inset-4 bg-tertiary/5 rounded-xl rotate-3"></div>
+<img alt="Mentor portrait" class="w-full aspect-[4/5] object-cover rounded-[40px] shadow-2xl border border-surface-container-highest relative z-10" src="images/mentors/6a58cf6d20d4.jpg">
+<!-- Doodle -->
+<div class="absolute -top-12 -left-16 w-24 h-24 z-20">
+<img alt="Doodle" class="w-full h-full object-contain" src="images/assets/ac722b140f97.jpg">
+</div>
+</div>
+</div>
+</div>
+<!-- Node 03 -->
+<div class="grid grid-cols-1 md:grid-cols-12 items-center gap-12">
+<div class="md:col-span-6 order-2 md:order-1 flex justify-center relative">
+<div class="relative w-full max-w-md float-node">
+<div class="absolute -top-6 -right-6 z-20 bg-secondary text-on-secondary px-6 py-3 rounded-full font-label-caps text-xs shadow-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-base">local_cafe</span> COFFEE CHAT
+                    </div>
+<img alt="Coffee chat session" class="w-full aspect-[4/5] object-cover rounded-[40px] shadow-2xl border border-surface-container-highest relative z-10" src="images/assets/290b04af6ce8.jpg">
+<!-- Overlapping New Photo -->
+<div class="absolute -bottom-8 -left-12 w-56 aspect-video rounded-2xl overflow-hidden shadow-xl border-4 border-white -rotate-3 z-20">
+<img alt="Students laughing" class="w-full h-full object-cover" src="images/stories/c3d0847f8b51.jpg">
+</div>
+</div>
+</div>
+<div class="md:col-span-5 md:col-start-8 order-1 md:order-2 flex flex-col items-start gap-6">
+<div class="bg-secondary/10 text-secondary rounded-full px-4 py-1 font-label-caps text-label-caps border border-secondary/20 shadow-sm">NODE 03</div>
+<h3 class="font-headline-md text-headline-md text-primary leading-tight">一见如故的全球利他朋友圈</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">我们想为所有热爱分享、愿意搭一把手的人，搭一个真正纯粹的平台。</p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">在这里，你聊的可不是身边的老面孔，而是来自全球各地的同行者。想知道未来目的地的真实生活和学业到底啥样？直接在这儿找个当地的 Mentor 聊一场就行！</p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">大家都是带着“想帮帮别人”的坦诚心态而来，所以根本不需要套路，一开麦就一见如故，直接成朋友。在这个圈子里， Mentor 之间也在互相学习、一起向前走。</p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-4 py-1.5 bg-surface-container-highest rounded-full text-xs font-label-caps text-on-surface-variant">#PeerSupport</span>
+<span class="px-4 py-1.5 bg-surface-container-highest rounded-full text-xs font-label-caps text-on-surface-variant">#GlobalNetworking</span>
+</div>
+</div>
+</div>
+</div>
+</div></section>
+<!-- Founder Interactive Section -->
+<section class="py-section-padding px-margin-mobile md:px-8 mx-auto w-full">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">看看背后运行的创始人们吧</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Greetings from our founders！</p>
+</div>
+<div class="mx-auto flex flex-col gap-4 max-w-[90%]" id="founder-accordion">
+<!-- Founder 1 -->
+<div class="founder-card border border-outline-variant/30 p-6 cursor-pointer overflow-hidden group rounded-[40px]" onclick="toggleFounder(this)">
+<div class="flex items-center gap-6">
+<div class="w-16 h-16 rounded-full border-4 border-secondary-container overflow-hidden flex-shrink-0 transition-transform group-hover:scale-110">
+<img alt="Jessie Dong" class="w-full h-full object-cover" src="images/assets/28095558f9d0.jpg">
+</div>
+<div class="flex-grow">
+<h3 class="font-headline-md text-headline-md text-primary">Jessie Dong</h3>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Yale University · head of platform</p>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform group-[.expanded]:rotate-180" style="transform: rotate(0deg);">expand_more</span>
+</div>
+<div class="hidden-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out opacity-0" style="max-height: 0px; opacity: 0;">
+<div class="pt-8 border-t border-outline-variant/20 mt-6 flex gap-8">
+<div class="flex-grow space-y-4">
+<p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+                                    "I spent years decoding the Ivy League admissions process. My mission is to ensure that no student's potential is lost in translation. I believe every transcript deserves a soul."
+                                </p>
+<div class="flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined animate-sparkle" style="font-variation-settings: &quot;FILL&quot; 1;">auto_awesome</span>
+<span class="font-label-md text-label-md">Witty Strategist &amp; Coffee Enthusiast</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Founder 2 -->
+<div class="founder-card border border-outline-variant/30 p-6 cursor-pointer overflow-hidden group rounded-[40px]" onclick="toggleFounder(this)">
+<div class="flex items-center gap-6">
+<div class="w-16 h-16 rounded-full border-4 border-tertiary-fixed-dim overflow-hidden flex-shrink-0 transition-transform group-hover:scale-110">
+<img alt="Emma Zhou" class="w-full h-full object-cover" src="images/assets/cfff11e73bea.jpg">
+</div>
+<div class="flex-grow">
+<h3 class="font-headline-md text-headline-md text-primary">Emma Zhou</h3>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Imperial College London · co-founder</p>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform group-[.expanded]:rotate-180" style="transform: rotate(0deg);">expand_more</span>
+</div>
+<div class="hidden-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out opacity-0" style="max-height: 0px; opacity: 0;">
+<div class="pt-8 border-t border-outline-variant/20 mt-6 grid grid-cols-1 md:grid-cols-2 gap-8 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] p-6 rounded-xl">
+<!-- Left Column: Polaroid in Sleeve -->
+<div class="flex justify-center items-center">
+<div class="relative p-2 bg-white/30 backdrop-blur-sm border border-white/50 rounded-lg shadow-xl overflow-hidden group flex justify-center items-center">
+<!-- Gloss Highlight -->
+<div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/20 to-transparent pointer-events-none"></div>
+<!-- Polaroid Card -->
+<div class="bg-white p-6 pb-4 shadow-xl rounded-xl border border-outline-variant/20 relative flex flex-col items-center gap-4 transition-transform group-hover:rotate-0 scale-110" style="width: 320px; aspect-ratio: 3 / 4; padding: 2rem;">
+  <!-- Badge Punch Hole -->
+  <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-10 h-3 bg-surface-container-highest rounded-full border border-outline-variant/30 shadow-inner"></div>
+  
+  <!-- Brand Watermark -->
+  <div class="absolute top-4 right-4 opacity-10 pointer-events-none">
+    <span class="material-symbols-outlined text-4xl">verified</span>
+  </div>
+
+  <!-- Photo -->
+  <div class="w-56 aspect-[4/5] rounded-lg overflow-hidden border-2 border-surface-container-high shadow-sm mb-4"><img alt="Emma Zhou" class="w-full h-full object-cover" src="images/assets/0f7ecad6b8b7.jpg"></div>
+
+  <!-- ID Fields -->
+  <div class="w-full space-y-2 text-left gap-4">
+    <div>
+      <p class="text-[10px] font-bold text-outline uppercase tracking-widest">Name</p>
+      <p class="font-headline-md text-primary leading-tight">Emma Zhou</p>
+    </div>
+    <div class="grid grid-cols-2 gap-2">
+      <div>
+        <p class="text-[10px] font-bold text-outline uppercase tracking-widest">Department</p>
+        <p class="text-xs font-medium text-on-surface">Founder</p>
+      </div>
+      <div>
+        <p class="text-[10px] font-bold text-outline uppercase tracking-widest">Role</p>
+        <p class="text-xs font-medium text-on-surface">Intern</p>
+      </div>
+    </div>
+    <div>
+      <p class="text-[10px] font-bold text-outline uppercase tracking-widest">Institution</p>
+      <p class="text-xs font-medium text-on-surface">Imperial College London</p>
+    </div>
+  </div>
+
+  <!-- Footer: ID & Barcode -->
+  <div class="w-full mt-2 pt-3 border-t border-dashed border-outline-variant/30 flex justify-between items-end">
+    <div class="font-mono text-[10px] text-outline tracking-tighter">
+      <span class="block opacity-50">ACCESS LEVEL: ALPHA</span>
+      <span class="font-bold">FOUNDER ID: 002</span>
+    </div>
+    <div class="flex flex-col items-end gap-1">
+      <div class="flex gap-[1px] h-6 items-end">
+        <div class="w-[1px] h-full bg-on-surface"></div>
+        <div class="w-[2px] h-full bg-on-surface"></div>
+        <div class="w-[1px] h-3/4 bg-on-surface"></div>
+        <div class="w-[3px] h-full bg-on-surface"></div>
+        <div class="w-[1px] h-full bg-on-surface"></div>
+        <div class="w-[2px] h-1/2 bg-on-surface"></div>
+        <div class="w-[1px] h-full bg-on-surface"></div>
+        <div class="w-[1px] h-full bg-on-surface"></div>
+        <div class="w-[2px] h-3/4 bg-on-surface"></div>
+      </div>
+      <p class="text-[8px] font-mono opacity-40">LUMINA SOFT SYS</p>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<!-- Right Column: Showcase & Story -->
+<div class="flex flex-col gap-8">
+<!-- Top: Personal Showcase -->
+<div class="relative py-8 flex flex-col items-center">
+<div class="w-64 h-64 rounded-full border-4 border-white shadow-md overflow-hidden z-10"><img alt="Emma" class="w-full h-full object-cover" src="images/assets/61f5d72a7b4f.jpg"></div>
+<!-- Floating Tags -->
+<span class="absolute top-0 left-4 bg-[#fce7f3] text-[#9d174d] px-3 py-1 rounded-full text-xs font-medium shadow-sm -rotate-6">冷死也要冰美式</span>
+<span class="absolute top-4 right-0 bg-[#fef3c7] text-[#92400e] px-3 py-1 rounded-full text-xs font-medium shadow-sm rotate-3">Dog person forever</span>
+<span class="absolute bottom-4 left-0 bg-[#dbeafe] text-[#1e40af] px-3 py-1 rounded-full text-xs font-medium shadow-sm rotate-12">Kpop Lover</span>
+<span class="absolute bottom-0 right-4 bg-[#f3f4f6] text-[#374151] px-3 py-1 rounded-full text-xs font-medium shadow-sm -rotate-3">黄金矿工</span>
+</div>
+<!-- Bottom: My Story -->
+<div class="space-y-4">
+<h4 class="font-bold text-primary tracking-tight uppercase text-sm">MY STORY:</h4>
+<div class="text-sm text-on-surface-variant leading-relaxed space-y-3">
+<p class="">我常说自己是“小点子学家”。</p><div class="">在地质学里，最璀璨的宝石往往诞生于高温、高压与极度苛刻的环境中。</div><div class="">比起做一个冷冰冰的矿工，我要求我的人生这块岩石不仅坚硬，还要结晶出绝妙的光泽与形态。<span style="font-size: 0.875rem;" class="">所以比起宏大复杂的叙事，我想我更喜欢在那些未经雕琢、毫无灵气的呆滞页岩深处，寻找哪怕极微小的闪光点，将其放大。</span></div><div><span style="font-size: 0.875rem;" class="">很多人常说工科女呆板，说地质严肃。但我偏热衷于踏上未知的旅行，喜欢热热闹闹地交朋友，沉迷于音乐肆意迸发的能量。我拥有一个斑斓而奇妙的小世界，但也随时敞开大门，欢迎任何人带上他们的故事光临。</span></div><div><span style="font-size: 0.875rem;" class="">凿穿沉闷，理清混沌。我期待在这片露头上，与每一个灵光一现的小点子一起，结晶出一片透亮、独特且富有生命力的小小矿脉。</span></div><p></p>
+
+</div>
+</div>
+</div>
+</div></div>
+</div>
+<!-- Founder 3 -->
+<div class="founder-card border border-outline-variant/30 p-6 cursor-pointer overflow-hidden group rounded-[40px]" onclick="toggleFounder(this)">
+<div class="flex items-center gap-6">
+<div class="w-16 h-16 rounded-full border-4 border-primary-container overflow-hidden flex-shrink-0 transition-transform group-hover:scale-110">
+<img alt="Founder" class="w-full h-full object-cover transition-transform duration-700 hover:rotate-6" src="images/assets/a6ec000df83a.jpg">
+</div>
+<div class="flex-grow">
+<h3 class="font-headline-md text-headline-md text-primary">1111</h3>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Stanford GSB · CEO</p>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform group-[.expanded]:rotate-180" style="transform: rotate(0deg);">expand_more</span>
+</div>
+<div class="hidden-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out opacity-0" style="max-height: 0px; opacity: 0;">
+<div class="pt-8 border-t border-outline-variant/20 mt-6 flex flex-col md:flex-row gap-8 items-start">
+<div class="flex-grow space-y-4">
+<p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+                                    "Silicon Valley taught me how to scale technology, but mentorship taught me how to scale human potential. I'm here to ensure every student finds their 'Yes'."
+                                </p>
+<div class="flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined animate-sparkle" style="font-variation-settings: &quot;FILL&quot; 1;">auto_awesome</span>
+<span class="font-label-md text-label-md">Marathon Runner &amp; Narrative Specialist</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-padding">
+<div class="max-w-4xl mx-auto px-margin-mobile md:px-8 text-center bg-primary rounded-[40px] p-12 md:p-20 text-white relative overflow-hidden shadow-2xl">
+<div class="absolute top-0 right-0 p-8 opacity-20">
+<span class="material-symbols-outlined text-[120px]">lightbulb</span>
+</div>
+<h2 class="font-display-lg text-4xl md:text-5xl mb-6">加入我们？</h2>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-white text-primary px-8 py-4 rounded-xl font-label-md text-label-md font-bold hover:bg-opacity-90 transition-all active:scale-95">寻找Mentor</button>
+<button class="border-2 border-white/30 px-8 py-4 rounded-xl font-label-md text-label-md font-bold hover:bg-white/10 transition-all active:scale-95">成为mentor</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-highest full-width bottom">
+<div class="w-full py-stack-lg px-margin-mobile md:px-8 max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-stack-md">
+<div class="font-headline-md text-headline-md text-primary">
+                Your Admissions Mentor
+            </div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Contact Us</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Careers</a>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-center md:text-right opacity-80">
+                © 2024 Your Admissions Mentor. Institutional Trust meets Human Connection.
+            </p>
+</div>
+</footer>
+<script>
+        function toggleFounder(element) {
+            const allCards = document.querySelectorAll('.founder-card');
+            const isClosing = element.classList.contains('expanded');
+            
+            allCards.forEach(card => {
+                const content = card.querySelector('.hidden-content');
+                const icon = card.querySelector('.material-symbols-outlined:last-child');
+                
+                // If it's the clicked card
+                if (card === element) {
+                    if (isClosing) {
+                        card.classList.remove('expanded');
+                        content.style.maxHeight = '0';
+                        content.style.opacity = '0';
+                        content.classList.remove('mt-6');
+                        icon.style.transform = 'rotate(0deg)';
+                    } else {
+                        card.classList.add('expanded');
+                        content.style.maxHeight = '1000px'; // Increased for long content like Emma's
+                        content.style.opacity = '1';
+                        content.classList.add('mt-6');
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                } else {
+                    // Close other cards (Classic accordion behavior - optional but cleaner)
+                    card.classList.remove('expanded');
+                    content.style.maxHeight = '0';
+                    content.style.opacity = '0';
+                    content.classList.remove('mt-6');
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            });
+        }
+    </script>
+
+
+</body></html>
