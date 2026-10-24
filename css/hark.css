@@ -1,0 +1,328 @@
+/* ============================================================
+   hark.css — hark 美学设计系统（浅色）
+   Tokens 取自 hark-ui-research/reports/design-tokens.css (.theme-light)
+   排版刻度取自 reports/design-analysis.md
+   ============================================================ */
+
+:root {
+  /* --- 文字 --- */
+  --text-primary: rgb(29, 29, 31);
+  --text-secondary: rgba(29, 29, 31, .5);
+  --text-tertiary: rgba(29, 29, 31, .3);
+  --text-primary-on: rgb(249, 249, 250);
+  --text-secondary-on: rgba(249, 249, 250, .5);
+
+  /* --- 描边 --- */
+  --stroke-primary: rgba(29, 29, 31, .14);
+  --stroke-secondary: rgba(29, 29, 31, .07);
+
+  /* --- 材质（叠在天空背景上的玻璃层） --- */
+  --regular-bg: rgba(255, 255, 255, .668);
+  --regular-solid-bg: rgba(255, 255, 255, .96);
+  --thin-bg: rgba(255, 255, 255, .55);
+  --fill-tertiary: rgba(29, 29, 31, .05);
+  --hover-wash: rgba(29, 29, 31, .05);
+
+  /* --- 语义色 --- */
+  --color-attention: #FF4D00;
+  --color-info: #005AD7;
+  --color-success: #0F9D58;
+  --color-error: #D64545;
+  --ink: rgb(29, 29, 31);
+
+  /* --- 间距刻度 --- */
+  --sp-1: 2px;  --sp-2: 4px;  --sp-3: 6px;  --sp-4: 8px;
+  --sp-5: 10px; --sp-6: 12px; --sp-7: 14px; --sp-8: 16px;
+  --sp-9: 20px; --sp-10: 24px; --sp-11: 28px; --sp-12: 32px;
+  --sp-13: 44px; --sp-14: 48px; --sp-15: 64px;
+
+  /* --- 圆角刻度 --- */
+  --r-1: 4px; --r-2: 8px; --r-3: 12px; --r-4: 16px;
+  --r-5: 20px; --r-6: 24px; --r-pill: 9999px;
+
+  /* --- 阴影 --- */
+  --shadow-1: 0 2px 8px rgba(0, 0, 0, .2);
+  --shadow-2: 0 4px 16px rgba(0, 0, 0, .15);
+  --shadow-3: 0 8px 24px rgba(0, 0, 0, .4);
+  --card-bevel: inset 0 1px 0 rgba(255, 255, 255, .9),
+                inset 0 -1px 0 rgba(29, 29, 31, .06);
+
+  /* --- 动效 --- */
+  --ease: cubic-bezier(.45, 0, .55, 1);
+  --dur-1: .15s; --dur-2: .2s; --dur-3: .3s;
+  --spring: cubic-bezier(.2, .9, .25, 1.1);
+  --spring-time: .42s;
+
+  /* --- 字体栈 --- */
+  --font-sans: "GT Standard L", "Helvetica Neue", Inter, -apple-system,
+    BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-serif: "Hark Serif", Newsreader, Georgia, "Songti SC", serif;
+  --font-mono: "GT Standard Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+/* ============ 基础 ============ */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: transparent;           /* 天空 iframe 兜底：纯黑底在 html 上 */
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 19.5px;
+  letter-spacing: 0;
+  -webkit-font-smoothing: antialiased;
+}
+html { background: #eaf2fb; }        /* 天空加载前的占位 */
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; }
+::selection { background: var(--color-attention); color: #fff; }
+
+/* ============ 天空背景 ============ */
+.sky-frame {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ============ 排版 ============ */
+.h0, .h1, .h2, .h3 { margin: 0; color: var(--text-primary); }
+.h0 {
+  font-family: var(--font-serif);
+  font-size: 48px; line-height: 62.4px; font-weight: 500;
+  letter-spacing: -.03em;
+}
+.h1 { font-size: 32px; line-height: 41.6px; font-weight: 500; letter-spacing: -.02em; }
+.h2 { font-size: 24px; line-height: 31.2px; font-weight: 500; letter-spacing: -.02em; }
+.h3 { font-size: 20px; line-height: 26px; font-weight: 500; letter-spacing: -.01em; }
+.body1 { font-size: 15px; line-height: 19.5px; font-weight: 400; }
+.body2 { font-size: 14px; line-height: 18.2px; font-weight: 400; }
+.caption {
+  font-size: 12px; line-height: 15.6px; font-weight: 500;
+  letter-spacing: .05em; text-transform: uppercase;
+  color: var(--text-secondary);
+}
+.serif-em { font-family: var(--font-serif); font-style: italic; font-weight: 300; }
+.text-secondary { color: var(--text-secondary); }
+.text-tertiary { color: var(--text-tertiary); }
+
+@media (max-width: 640px) {
+  .h0 { font-size: 34px; line-height: 44px; }
+  .h1 { font-size: 26px; line-height: 34px; }
+}
+
+/* ============ 布局容器 ============ */
+.hark-section {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-left: clamp(16px, 4vw, 64px);
+  padding-right: clamp(16px, 4vw, 64px);
+}
+main { position: relative; }
+
+/* ============ 导航 ============ */
+.hark-nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 50;
+  height: 68px;
+  background: var(--thin-bg);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  border-bottom: 1px solid var(--stroke-primary);
+}
+.hark-nav-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 clamp(16px, 4vw, 64px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-8);
+}
+.hark-brand {
+  display: flex; align-items: center; gap: var(--sp-4);
+  font-size: 17px; font-weight: 600; letter-spacing: -.01em;
+  white-space: nowrap;
+}
+.hark-nav-links { display: flex; align-items: center; gap: var(--sp-10); }
+.hark-nav-link {
+  font-size: 13px; font-weight: 500; letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: color var(--dur-2) ease;
+}
+.hark-nav-link:hover { color: var(--text-primary); }
+.hark-nav-link.active {
+  color: var(--text-primary);
+  border-bottom-color: var(--color-attention);
+}
+.hark-nav-actions { display: flex; align-items: center; gap: var(--sp-6); }
+
+/* 移动端菜单 */
+.hark-nav-toggle {
+  display: none;
+  width: 40px; height: 40px;
+  align-items: center; justify-content: center;
+  background: transparent; border: none; border-radius: var(--r-3);
+}
+.hark-nav-toggle:active { transform: scale(.97); }
+.hark-mobile-menu {
+  display: none;
+  position: fixed;
+  top: 68px; left: 0; right: 0;
+  z-index: 49;
+  background: var(--regular-solid-bg);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  border-bottom: 1px solid var(--stroke-primary);
+  padding: var(--sp-8) clamp(16px, 4vw, 64px) var(--sp-10);
+  flex-direction: column;
+  gap: var(--sp-9);
+}
+.hark-mobile-menu.open { display: flex; }
+.hark-mobile-menu .hark-nav-link { font-size: 15px; text-transform: none; letter-spacing: 0; }
+
+@media (max-width: 860px) {
+  .hark-nav-links, .hark-nav-actions .hark-btn { display: none; }
+  .hark-nav-toggle { display: inline-flex; }
+}
+
+/* 页面上部留白，避开 fixed 导航 */
+.page-top { padding-top: 68px; }
+
+/* ============ 按钮 ============ */
+.hark-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: var(--sp-4);
+  height: 48px;
+  padding: 0 var(--sp-10);
+  border-radius: var(--r-pill);
+  border: 1px solid transparent;
+  font-size: 15px; font-weight: 500; line-height: 1;
+  transition: transform .12s ease-out, background var(--dur-2) ease,
+              border-color var(--dur-2) ease, color var(--dur-2) ease;
+  white-space: nowrap;
+}
+.hark-btn:active { transform: scale(.97); }
+.hark-btn--primary { background: var(--ink); color: var(--text-primary-on); }
+.hark-btn--primary:hover { background: rgba(29, 29, 31, .85); }
+.hark-btn--accent { background: var(--color-attention); color: #fff; }
+.hark-btn--accent:hover { background: #e64500; }
+.hark-btn--ghost {
+  background: transparent; color: var(--text-primary);
+  border-color: var(--stroke-primary);
+}
+.hark-btn--ghost:hover { background: var(--hover-wash); }
+.hark-btn--sm { height: 40px; padding: 0 var(--sp-8); font-size: 14px; }
+
+/* ============ 卡片（玻璃材质） ============ */
+.hark-card {
+  background: var(--regular-bg);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  border: 1px solid var(--stroke-primary);
+  border-radius: var(--r-6);
+  box-shadow: var(--card-bevel);
+}
+.hark-card--solid { background: var(--regular-solid-bg); }
+.hark-card--thin { background: var(--thin-bg); }
+.hark-card-pad { padding: var(--sp-12); }
+@media (max-width: 640px) { .hark-card-pad { padding: var(--sp-9); } }
+
+/* hover 上浮卡 */
+.hark-card-lift { transition: transform var(--spring-time) var(--spring),
+                              box-shadow var(--dur-3) ease; }
+.hark-card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-bevel), var(--shadow-2);
+}
+
+/* ============ 标签 pill ============ */
+.hark-tag {
+  display: inline-flex; align-items: center;
+  height: 28px; padding: 0 var(--sp-6);
+  border-radius: var(--r-pill);
+  background: var(--fill-tertiary);
+  border: 1px solid var(--stroke-secondary);
+  font-size: 13px; font-weight: 500; color: var(--text-primary);
+}
+.hark-tag--accent {
+  background: rgba(255, 77, 0, .08);
+  border-color: rgba(255, 77, 0, .25);
+  color: var(--color-attention);
+}
+
+/* ============ 跑马灯 ============ */
+@keyframes hark-marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.hark-marquee { overflow: hidden; }
+.hark-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: hark-marquee 35s linear infinite;
+}
+.hark-marquee-track:hover { animation-play-state: paused; }
+.hark-marquee--fast .hark-marquee-track { animation-duration: 25s; }
+.hark-fade-mask {
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+@media (prefers-reduced-motion: reduce) {
+  .hark-marquee-track { animation: none; }
+}
+
+/* ============ 页脚 ============ */
+.hark-footer {
+  background: var(--ink);
+  color: var(--text-primary-on);
+  margin-top: var(--sp-15);
+}
+.hark-footer a { color: var(--text-secondary-on); transition: color var(--dur-2) ease; }
+.hark-footer a:hover { color: var(--text-primary-on); }
+.hark-footer-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: var(--sp-14) clamp(16px, 4vw, 64px) var(--sp-12);
+}
+.hark-footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: var(--sp-12);
+}
+.hark-footer h4 {
+  margin: 0 0 var(--sp-6);
+  font-size: 12px; font-weight: 600; letter-spacing: .05em;
+  text-transform: uppercase; color: var(--text-secondary-on);
+}
+.hark-footer ul { list-style: none; margin: 0; padding: 0; }
+.hark-footer li { margin-bottom: var(--sp-4); font-size: 14px; }
+.hark-footer-bottom {
+  border-top: 1px solid rgba(249, 249, 250, .14);
+  margin-top: var(--sp-12); padding-top: var(--sp-9);
+  font-size: 13px; color: var(--text-secondary-on);
+  display: flex; justify-content: space-between; gap: var(--sp-8); flex-wrap: wrap;
+}
+@media (max-width: 760px) {
+  .hark-footer-grid { grid-template-columns: 1fr 1fr; gap: var(--sp-10); }
+}
+
+/* ============ 杂项工具 ============ */
+.hark-divider { border: none; border-top: 1px solid var(--stroke-primary); }
+.hark-glass-band {
+  background: var(--thin-bg);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  border-top: 1px solid var(--stroke-primary);
+  border-bottom: 1px solid var(--stroke-primary);
+}
