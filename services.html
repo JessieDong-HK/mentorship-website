@@ -1,354 +1,409 @@
-<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
 <meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Services & Pricing | Your Admissions Mentor</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Hanken+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "inverse-primary": "#c1c6d7",
-                        "primary": "#030813",
-                        "tertiary": "#000910",
-                        "on-background": "#191c1c",
-                        "on-tertiary-container": "#768a97",
-                        "on-error": "#ffffff",
-                        "on-secondary-container": "#556555",
-                        "surface-container-low": "#f3f4f3",
-                        "inverse-surface": "#2e3131",
-                        "on-primary": "#ffffff",
-                        "tertiary-container": "#0e222c",
-                        "on-secondary-fixed": "#101f13",
-                        "on-primary-container": "#828796",
-                        "surface-variant": "#e1e3e2",
-                        "surface-dim": "#d9dad9",
-                        "on-primary-fixed": "#161c27",
-                        "secondary-container": "#d0e2ce",
-                        "outline": "#76777c",
-                        "on-primary-fixed-variant": "#414754",
-                        "on-secondary": "#ffffff",
-                        "error": "#ba1a1a",
-                        "secondary-fixed": "#d5e7d4",
-                        "error-container": "#ffdad6",
-                        "primary-container": "#1a202c",
-                        "on-tertiary-fixed-variant": "#364954",
-                        "tertiary-fixed": "#d1e5f3",
-                        "surface-container": "#edeeed",
-                        "secondary-fixed-dim": "#b9cbb8",
-                        "on-error-container": "#93000a",
-                        "primary-fixed-dim": "#c1c6d7",
-                        "on-secondary-fixed-variant": "#3b4b3c",
-                        "surface-container-lowest": "#ffffff",
-                        "tertiary-fixed-dim": "#b5c9d7",
-                        "on-surface-variant": "#45474c",
-                        "surface": "#f9f9f8",
-                        "inverse-on-surface": "#f0f1f0",
-                        "on-tertiary": "#ffffff",
-                        "surface-bright": "#f9f9f8",
-                        "surface-container-high": "#e7e8e7",
-                        "on-surface": "#191c1c",
-                        "outline-variant": "#c6c6cc",
-                        "surface-tint": "#585e6c",
-                        "background": "#f9f9f8",
-                        "primary-fixed": "#dde2f3",
-                        "on-tertiary-fixed": "#091e28",
-                        "surface-container-highest": "#e1e3e2",
-                        "secondary": "#526253",
-                        "dark": "#02121d"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "unit": "8px",
-                        "margin-desktop": "64px",
-                        "gutter": "24px",
-                        "container-max": "1200px",
-                        "stack-sm": "16px",
-                        "stack-md": "32px",
-                        "margin-mobile": "20px",
-                        "stack-lg": "48px"
-                    },
-                    "fontFamily": {
-                        "display-lg": ["Bodoni Moda"],
-                        "body-md": ["Hanken Grotesk"],
-                        "headline-lg": ["Bodoni Moda"],
-                        "label-md": ["Hanken Grotesk"],
-                        "headline-md": ["Bodoni Moda"],
-                        "body-lg": ["Hanken Grotesk"],
-                        "caption": ["Hanken Grotesk"]
-                    },
-                    "fontSize": {
-                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
-                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                        "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "500"}],
-                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.5px", "fontWeight": "500"}],
-                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
-                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                        "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}]
-                    }
-                },
-            },
-        }
-    </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services &amp; Pricing | 过来人Mentor</title>
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,ital,wght@6..72,0,400;6..72,0,500;6..72,1,400&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/hark.css">
 <style>
-        .hanging-tag {
-            transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-            box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
-        }
-        .service-card:hover .hanging-tag {
-            transform: translateX(12px) rotate(2deg);
-        }
-        .signature-shadow {
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.04);
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-        }
-    </style>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  /* ---- 页面局部 ---- */
+  html { scroll-behavior: smooth; }
+
+  .menu-header { text-align: center; padding: 120px 0 64px; }
+  .menu-header h1 { font-family: var(--font-serif); margin-bottom: 16px; }
+  .menu-header p { max-width: 640px; margin: 0 auto; }
+
+  .menu-layout { display: flex; flex-direction: column; gap: 24px; position: relative; }
+
+  /* 侧边锚点导航（sticky） */
+  .tier-sidenav {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+    position: sticky;
+    top: 128px;
+    height: fit-content;
+    width: 256px;
+    flex-shrink: 0;
+  }
+  .tier-sidenav nav { display: flex; flex-direction: column; gap: 16px; }
+  .tier-link {
+    display: flex; align-items: center; gap: 12px;
+    font-size: 20px; line-height: 26px; font-weight: 500; letter-spacing: -.01em;
+    color: var(--text-tertiary);
+    transition: color var(--dur-2) ease, transform var(--dur-3) var(--ease);
+  }
+  .tier-link:hover { color: var(--text-secondary); transform: translateX(4px); }
+  .tier-link.active {
+    color: var(--text-primary);
+    font-weight: 700;
+    transform: translateX(8px);
+  }
+
+  .menu-content { flex-grow: 1; display: flex; flex-direction: column; gap: 48px; min-width: 0; }
+  .menu-content section { display: flex; flex-direction: column; gap: 32px; scroll-margin-top: 128px; }
+
+  .tier-head {
+    display: flex; align-items: center; gap: 16px;
+    border-left: 4px solid var(--ink);
+    padding: 8px 0 8px 24px;
+  }
+  .tier-head--two { border-left-color: var(--color-success); }
+  .tier-head--three { border-left-color: var(--color-info); }
+  .tier-head .emoji { font-size: 30px; line-height: 1; }
+
+  /* 服务卡：hark-card 体系 + 右侧价格吊牌 */
+  .service-card { position: relative; }
+  .service-card-body {
+    position: relative; z-index: 1;
+    padding-right: 192px;
+  }
+  .service-card-body--wide { padding-right: 224px; }
+  .hanging-tag {
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    z-index: 2;
+    transform: translateY(-50%) rotate(-3deg);
+    background: var(--ink);
+    color: var(--text-primary-on);
+    padding: 12px 32px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, .1);
+    transition: transform .3s cubic-bezier(.23, 1, .32, 1);
+  }
+  .service-card:hover .hanging-tag {
+    transform: translateY(-50%) translateX(12px) rotate(2deg);
+  }
+  .hanging-tag .tag-label {
+    font-size: 10px; text-transform: uppercase;
+    letter-spacing: -.02em; opacity: .7; margin-bottom: 4px;
+  }
+  .hanging-tag .tag-price { font-weight: 700; letter-spacing: -.01em; white-space: nowrap; }
+  .hanging-tag--alt { background: var(--color-success); }
+  .hanging-tag--xl {
+    transform: translateY(-50%) rotate(-2deg);
+    padding: 24px 40px;
+    display: flex; flex-direction: column; align-items: flex-end;
+  }
+  .hanging-tag--xl .tag-label {
+    font-size: 11px; letter-spacing: .2em; font-weight: 700; opacity: .8; margin-bottom: 8px;
+  }
+  .hanging-tag--xl .tag-price { font-size: 20px; }
+  .hanging-tag--xl .tag-sub { font-size: 10px; margin-top: 4px; opacity: .6; }
+
+  .platinum-badge {
+    display: inline-block; margin-bottom: 8px;
+    padding: 4px 12px; border-radius: var(--r-pill);
+    background: var(--fill-tertiary); border: 1px solid var(--stroke-secondary);
+    font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em;
+    color: var(--text-primary);
+  }
+  .deluxe-chips { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 24px; }
+  .deluxe-chips .hark-tag { font-size: 11px; text-transform: uppercase; letter-spacing: -.02em; height: 26px; }
+
+  /* CTA */
+  .cta-section { padding: 96px 0; text-align: center; }
+  .cta-section h2 { font-family: var(--font-serif); margin-bottom: 24px; }
+  .cta-section p { margin-bottom: 40px; }
+
+  @media (min-width: 861px) {
+    .menu-layout { flex-direction: row; }
+    .tier-sidenav { display: flex; }
+  }
+  @media (max-width: 860px) {
+    .service-card-body, .service-card-body--wide { padding-right: 24px; }
+    .hanging-tag, .hanging-tag--xl {
+      position: static;
+      transform: rotate(-2deg);
+      display: inline-flex;
+      margin: 16px 24px 24px;
+    }
+    .service-card:hover .hanging-tag { transform: rotate(2deg); }
+  }
+</style>
 </head>
-<body class="text-on-background font-body-md selection:bg-primary-fixed selection:text-primary" style="background-color: rgb(255, 246, 245);">
-<!-- Header (Updated from SCREEN_106) -->
-<nav class="fixed top-0 left-0 right-0 z-50 border-b border-gray-100 h-20" style="background: rgba(255,255,255,0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);">
-  <div class="flex justify-between items-center w-full px-5 md:px-8 max-w-[1280px] mx-auto h-full">
-    <a href="index.html" class="flex items-center gap-2 no-underline">
-      <svg fill="none" height="32" viewBox="0 0 32 32" width="32"><circle cx="16" cy="16" r="14" stroke="#02121d" stroke-width="2.5"/><path d="M10 14C10 14 11 12 12.5 12C14 12 15 14 15 14" stroke="#02121d" stroke-linecap="round" stroke-width="2"/><path d="M17 14C17 14 18 12 19.5 12C21 12 22 14 22 14" stroke="#02121d" stroke-linecap="round" stroke-width="2"/><path d="M11 20C11 20 12.5 22.5 16 22.5C19.5 22.5 21 20 21 20" stroke="#02121d" stroke-linecap="round" stroke-width="2.5"/></svg>
-      <span class="text-xl font-bold tracking-tight text-[#0A2540]">过来人Mentor</span>
+<body>
+
+<iframe class="sky-frame" src="assets/sky.html" aria-hidden="true" tabindex="-1"></iframe>
+
+<!-- ===== 导航 ===== -->
+<nav class="hark-nav">
+  <div class="hark-nav-inner">
+    <a href="index.html" class="hark-brand">
+      <svg fill="none" height="30" viewBox="0 0 32 32" width="30"><circle cx="16" cy="16" r="14" stroke="#1D1D1F" stroke-width="2.5"/><path d="M10 14C10 14 11 12 12.5 12C14 12 15 14 15 14" stroke="#1D1D1F" stroke-linecap="round" stroke-width="2"/><path d="M17 14C17 14 18 12 19.5 12C21 12 22 14 22 14" stroke="#1D1D1F" stroke-linecap="round" stroke-width="2"/><path d="M11 20C11 20 12.5 22.5 16 22.5C19.5 22.5 21 20 21 20" stroke="#1D1D1F" stroke-linecap="round" stroke-width="2.5"/></svg>
+      <span>过来人Mentor</span>
     </a>
-    <div class="hidden md:flex items-center gap-6">
-<a class="text-[13px] font-bold text-[#0A2540] hover:text-[#1d3a78] transition-colors uppercase tracking-wider no-underline" href="index.html">Home</a>
-<a class="text-[13px] font-bold text-[#0A2540] hover:text-[#1d3a78] transition-colors uppercase tracking-wider no-underline" href="about.html">About Us</a>
-<a class="text-[13px] font-bold text-[#0A2540] hover:text-[#1d3a78] transition-colors uppercase tracking-wider no-underline" href="platform.html">Our Mentors</a>
-<a class="text-[13px] font-bold text-[#1d3a78] border-b-2 border-[#1d3a78] pb-0.5 transition-colors uppercase tracking-wider no-underline" href="services.html">Services</a>
-<a class="text-[13px] font-bold text-[#0A2540] hover:text-[#1d3a78] transition-colors uppercase tracking-wider no-underline" href="stories.html">Success Stories</a>
-<a class="text-[13px] font-bold text-[#0A2540] hover:text-[#1d3a78] transition-colors uppercase tracking-wider no-underline" href="recruit.html">Become a Mentor</a>
+    <div class="hark-nav-links">
+      <a class="hark-nav-link" href="index.html">Home</a>
+      <a class="hark-nav-link" href="about.html">About Us</a>
+      <a class="hark-nav-link" href="platform.html">Our Mentors</a>
+      <a class="hark-nav-link active" href="services.html">Services</a>
+      <a class="hark-nav-link" href="stories.html">Success Stories</a>
+      <a class="hark-nav-link" href="recruit.html">Become a Mentor</a>
     </div>
-    <a href="services.html" class="hidden md:inline-block bg-[#0A2540] text-white px-6 py-2.5 rounded-lg font-bold hover:opacity-90 transition-all active:scale-95 shadow-sm uppercase tracking-widest text-[11px] no-underline">Get Started</a>
-    <button class="md:hidden text-[#0A2540] p-2"><span class="material-symbols-outlined">menu</span></button>
+    <div class="hark-nav-actions">
+      <a href="services.html" class="hark-btn hark-btn--accent hark-btn--sm">Get Started</a>
+      <button class="hark-nav-toggle" aria-label="菜单" aria-expanded="false"><span class="material-symbols-outlined">menu</span></button>
+    </div>
   </div>
 </nav>
-<!-- Main Content Canvas -->
-<main class="pt-24 pb-stack-lg max-w-container-max mx-auto px-margin-desktop min-h-screen">
-<!-- Header -->
-<header class="text-center mb-stack-lg animate-fade-in">
-<h1 class="font-display-lg text-display-lg text-primary mb-4">Our Menu</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Elite academic mentorship designed with intellectual clarity and prestige. Choose your path to excellence.</p>
-</header>
-<div class="flex flex-col lg:flex-row gap-gutter relative">
-<!-- SideNavBar (Sticky Tier Anchors) -->
-<aside class="hidden lg:flex flex-col gap-stack-sm sticky top-32 h-fit w-64 shrink-0">
-<div class="mb-4">
-<h3 class="font-headline-lg text-headline-lg text-primary">Service Tiers</h3>
-<p class="font-caption text-caption uppercase text-on-surface-variant tracking-wider">Academic Excellence</p>
+<div class="hark-mobile-menu">
+  <a class="hark-nav-link" href="index.html">Home</a>
+  <a class="hark-nav-link" href="about.html">About Us</a>
+  <a class="hark-nav-link" href="platform.html">Our Mentors</a>
+  <a class="hark-nav-link active" href="services.html">Services</a>
+  <a class="hark-nav-link" href="stories.html">Success Stories</a>
+  <a class="hark-nav-link" href="recruit.html">Become a Mentor</a>
+  <a href="services.html" class="hark-btn hark-btn--accent">Get Started</a>
 </div>
-<nav class="flex flex-col gap-4">
-<a class="group flex items-center gap-3 text-primary font-bold translate-x-2 transition-transform" href="#tier-one">
-<span class="material-symbols-outlined text-primary">workspace_premium</span>
-<span class="font-headline-md text-headline-md">Tier One</span>
-</a>
-<a class="group flex items-center gap-3 text-outline-variant hover:text-secondary hover:translate-x-1 transition-all duration-300" href="#tier-two">
-<span class="material-symbols-outlined">military_tech</span>
-<span class="font-headline-md text-headline-md">Tier Two</span>
-</a>
-<a class="group flex items-center gap-3 text-outline-variant hover:text-secondary hover:translate-x-1 transition-all duration-300" href="#tier-three">
-<span class="material-symbols-outlined">star_rate</span>
-<span class="font-headline-md text-headline-md">Tier Three</span>
-</a>
-<a class="group flex items-center gap-3 text-outline-variant hover:text-secondary hover:translate-x-1 transition-all duration-300" href="#">
-<span class="material-symbols-outlined">add_circle</span>
-<span class="font-headline-md text-headline-md">Add-ons</span>
-</a>
-</nav>
-</aside>
-<!-- Menu Content -->
-<div class="flex-grow space-y-stack-lg">
-<!-- TIER ONE -->
-<section class="space-y-stack-md scroll-mt-32" id="tier-one"><!-- New Card: 和心仪的 Mentor 聊聊 -->
 
-<div class="flex items-center gap-4 border-l-4 border-primary pl-6 py-2">
-<span class="text-3xl">🍟</span>
-<div>
-<h2 class="font-headline-md text-headline-md text-primary">TIER ONE</h2>
-<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">单次单点 · 缺啥补啥</p>
-</div>
-</div><div class="service-card relative group" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s ease-out, transform 0.6s ease-out;"><div class="bg-surface-container-lowest border border-outline-variant/30 signature-shadow p-8 pr-48 rounded-lg relative z-10"><h3 class="font-headline-md text-headline-md mb-4 text-primary">和心仪的 Mentor 聊聊</h3><p class="text-body-md text-on-surface-variant leading-relaxed max-w-xl">锁定平台任意一位你心仪的顶级名校 Mentor，进行 1 对 1 精准连线。直接打破信息差，聊透目标院校的学术偏好、选课潜规则或特定的转学 Track 路线。</p></div><div class="hanging-tag absolute right-[-20px] top-1/2 -translate-y-1/2 z-20 bg-[#1A202C] text-white px-8 py-3 transform rotate-[-3deg]"><div class="text-[10px] uppercase tracking-tighter opacity-70 mb-1">Price</div><div class="font-bold tracking-tight">¥ [填写价格] / 60min</div></div></div>
-<!-- Card 1 -->
-<div class="service-card relative group" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s ease-out, transform 0.6s ease-out;">
-<div class="bg-surface-container-lowest border border-outline-variant/30 signature-shadow p-8 pr-48 rounded-lg relative z-10">
-<h3 class="font-headline-md text-headline-md mb-4 text-primary">文书逻辑修改</h3>
-<p class="text-body-md text-on-surface-variant leading-relaxed max-w-xl">
-                                别跟我扯花里胡哨的文笔，直接由藤校 Mentor 帮你硬核梳理逻辑，剥离中介味，让文书具备真正的学者思辨高度。
-                            </p>
-</div>
-<div class="hanging-tag absolute right-[-20px] top-1/2 -translate-y-1/2 z-20 bg-[#1A202C] text-white px-8 py-3 transform rotate-[-3deg]">
-<div class="text-[10px] uppercase tracking-tighter opacity-70 mb-1">Price</div>
-<div class="font-bold tracking-tight">¥ Market Price / 单次续命</div>
-</div>
-</div>
-<!-- Card 2 -->
-<div class="service-card relative group" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s ease-out 0.1s, transform 0.6s ease-out 0.1s;">
-<div class="bg-surface-container-lowest border border-outline-variant/30 signature-shadow p-8 pr-48 rounded-lg relative z-10">
-<h3 class="font-headline-md text-headline-md mb-4 text-primary">申请主线挖掘</h3>
-<p class="text-body-md text-on-surface-variant leading-relaxed max-w-xl">
-                                背景太散、活动太多不知道怎么串联？跟 Mentor 聊一小时，硬生生从里面解构出招生官完全无法拒绝的主线。
-                            </p>
-</div>
-<div class="hanging-tag absolute right-[-20px] top-1/2 -translate-y-1/2 z-20 bg-[#1A202C] text-white px-8 py-3 transform rotate-[-3deg]">
-<div class="text-[10px] uppercase tracking-tighter opacity-70 mb-1">Price</div>
-<div class="font-bold tracking-tight">¥ 3,200 / 1对1 60min</div>
-</div>
-</div>
-<!-- Card 3 -->
-<div class="service-card relative group" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s ease-out 0.2s, transform 0.6s ease-out 0.2s;">
-<div class="bg-surface-container-lowest border border-outline-variant/30 signature-shadow p-8 pr-48 rounded-lg relative z-10">
-<h3 class="font-headline-md text-headline-md mb-4 text-primary">选课与学分规划</h3>
-<p class="text-body-md text-on-surface-variant leading-relaxed max-w-xl">
-                                让 Mentor 带你硬啃梦校官网的选课空缺、学分转换规则，甚至教你套磁信怎么写才能让教授回复你。
-                            </p>
-</div>
-<div class="hanging-tag absolute right-[-20px] top-1/2 -translate-y-1/2 z-20 bg-[#1A202C] text-white px-8 py-3 transform rotate-[-3deg]">
-<div class="text-[10px] uppercase tracking-tighter opacity-70 mb-1">Price</div>
-<div class="font-bold tracking-tight">¥ 1,800 / 单次核心咨询</div>
-</div>
-</div>
-</section>
-<!-- TIER TWO -->
-<section class="space-y-stack-md scroll-mt-32 pt-stack-sm" id="tier-two">
-<div class="flex items-center gap-4 border-l-4 border-secondary pl-6 py-2">
-<span class="text-3xl">🍱</span>
-<div>
-<h2 class="font-headline-md text-headline-md text-secondary">TIER TWO</h2>
-<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">组合套餐 · 关键战役</p>
-</div>
-</div>
-<!-- Card 1 -->
-<div class="service-card relative group" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s ease-out 0.3s, transform 0.6s ease-out 0.3s;">
-<div class="bg-surface-container-lowest border border-outline-variant/30 signature-shadow p-8 pr-48 rounded-lg relative z-10">
-<h3 class="font-headline-md text-headline-md mb-4 text-primary">科研助理 (RA) 抢占计划</h3>
-<p class="text-body-md text-on-surface-variant leading-relaxed max-w-xl">
-                                专治科研经历一片空白。由名校 Mentor 全程带你进行跨校/校内科研精准卡位、教授背景深度解构、以及 1 对 1 导师套磁信撰写策略。
-                            </p>
-</div>
-<div class="hanging-tag absolute right-[-20px] top-1/2 -translate-y-1/2 z-20 bg-secondary text-white px-8 py-3 transform rotate-[-3deg]">
-<div class="text-[10px] uppercase tracking-tighter opacity-70 mb-1">Price</div>
-<div class="font-bold tracking-tight">¥ 12,800 / 半年通关</div>
-</div>
-</div>
-<!-- Card 2 -->
-<div class="service-card relative group" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s ease-out 0.4s, transform 0.6s ease-out 0.4s;">
-<div class="bg-surface-container-lowest border border-outline-variant/30 signature-shadow p-8 pr-48 rounded-lg relative z-10">
-<h3 class="font-headline-md text-headline-md mb-4 text-primary">从双非/文理学院冲刺 Top 15</h3>
-<p class="text-body-md text-on-surface-variant leading-relaxed max-w-xl">
-                                跨校转学最折磨人的就是学分转换和时间误差。套餐含：大一夏季选课精准卡位 + 梦校对应学分置换指导 + 转学专属的“My Journey”人文故事重塑。
-                            </p>
-</div>
-<div class="hanging-tag absolute right-[-20px] top-1/2 -translate-y-1/2 z-20 bg-secondary text-white px-8 py-3 transform rotate-[-3deg]">
-<div class="text-[10px] uppercase tracking-tighter opacity-70 mb-1">Price</div>
-<div class="font-bold tracking-tight">¥ 28,000 / 战略通关包</div>
-</div>
-</div>
-</section>
-<!-- TIER THREE -->
-<section class="space-y-stack-md scroll-mt-32 pt-stack-sm" id="tier-three">
-<div class="flex items-center gap-4 border-l-4 border-tertiary-container pl-6 py-2">
-<span class="text-3xl">🍾</span>
-<div>
-<h2 class="font-headline-md text-headline-md text-tertiary-container">TIER THREE</h2>
-<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">长线全包 · 导师当家</p>
-</div>
-</div>
-<!-- Deluxe Card -->
-<div class="service-card relative group" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s ease-out 0.5s, transform 0.6s ease-out 0.5s;">
-<div class="bg-surface-container-lowest border border-outline-variant/30 signature-shadow p-8 pr-56 rounded-lg relative z-10 overflow-hidden">
-<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 -mr-16 -mt-16 rounded-full blur-3xl"></div>
-<div class="mb-2 inline-block px-3 py-1 bg-primary-fixed text-primary text-[10px] font-bold uppercase tracking-widest rounded-full">Platinum Selection</div>
-<h3 class="font-headline-md text-headline-md mb-4 text-primary">梦校长线全包保驾（全期陪伴）</h3>
-<p class="text-body-md text-on-surface-variant leading-relaxed max-w-xl mb-6">
-                                没有任何冷冰冰的 KPI 考核和条条框框，这是由藤校 Mentor 团队全程为你掌勺的申请季。从大一的选课修法、GPA 极限守护、跨校学术资源挖掘，到最后的文书推倒重来与心理状态死磕。
-                            </p>
-<div class="flex gap-2 flex-wrap">
-<span class="bg-surface-container-low px-3 py-1 text-[11px] uppercase tracking-tighter border border-outline-variant/50">GPA Guard</span>
-<span class="bg-surface-container-low px-3 py-1 text-[11px] uppercase tracking-tighter border border-outline-variant/50">Global Resources</span>
-<span class="bg-surface-container-low px-3 py-1 text-[11px] uppercase tracking-tighter border border-outline-variant/50">End-to-End</span>
-</div>
-</div>
-<div class="hanging-tag absolute right-[-20px] top-1/2 -translate-y-1/2 z-20 bg-primary-container text-white px-10 py-6 transform rotate-[-2deg] flex flex-col items-end">
-<div class="text-[11px] uppercase tracking-[0.2em] opacity-80 mb-2 font-bold">Full Premium</div>
-<div class="font-bold text-xl tracking-tight">¥ Custom Quote</div>
-<div class="text-[10px] mt-1 opacity-60">全期顶配托付</div>
-</div>
-</div>
-</section>
-</div>
-</div>
+<main class="page-top">
+  <div class="hark-section">
+    <!-- Header -->
+    <header class="menu-header">
+      <h1 class="h0">Our Menu</h1>
+      <p class="body1 text-secondary">Elite academic mentorship designed with intellectual clarity and prestige. Choose your path to excellence.</p>
+    </header>
+
+    <div class="menu-layout">
+      <!-- SideNavBar (Sticky Tier Anchors) -->
+      <aside class="tier-sidenav">
+        <div style="margin-bottom:16px;">
+          <h3 class="h2">Service Tiers</h3>
+          <p class="caption" style="margin-top:4px;">Academic Excellence</p>
+        </div>
+        <nav>
+          <a class="tier-link active" href="#tier-one">
+            <span class="material-symbols-outlined">workspace_premium</span>
+            <span>Tier One</span>
+          </a>
+          <a class="tier-link" href="#tier-two">
+            <span class="material-symbols-outlined">military_tech</span>
+            <span>Tier Two</span>
+          </a>
+          <a class="tier-link" href="#tier-three">
+            <span class="material-symbols-outlined">star_rate</span>
+            <span>Tier Three</span>
+          </a>
+        </nav>
+      </aside>
+
+      <!-- Menu Content -->
+      <div class="menu-content">
+        <!-- TIER ONE -->
+        <section id="tier-one">
+          <div class="tier-head">
+            <span class="emoji">🍟</span>
+            <div>
+              <h2 class="h2">TIER ONE</h2>
+              <p class="caption">单次单点 · 缺啥补啥</p>
+            </div>
+          </div>
+          <!-- Card: 和心仪的 Mentor 聊聊 -->
+          <div class="service-card">
+            <div class="service-card-body hark-card hark-card--solid hark-card-pad">
+              <h3 class="h2" style="margin-bottom:16px;">和心仪的 Mentor 聊聊</h3>
+              <p class="body1 text-secondary" style="max-width:576px;">锁定平台任意一位你心仪的顶级名校 Mentor，进行 1 对 1 精准连线。直接打破信息差，聊透目标院校的学术偏好、选课潜规则或特定的转学 Track 路线。</p>
+            </div>
+            <div class="hanging-tag">
+              <div class="tag-label">Price</div>
+              <div class="tag-price">¥ [填写价格] / 60min</div>
+            </div>
+          </div>
+          <!-- Card 1 -->
+          <div class="service-card">
+            <div class="service-card-body hark-card hark-card--solid hark-card-pad">
+              <h3 class="h2" style="margin-bottom:16px;">文书逻辑修改</h3>
+              <p class="body1 text-secondary" style="max-width:576px;">别跟我扯花里胡哨的文笔，直接由藤校 Mentor 帮你硬核梳理逻辑，剥离中介味，让文书具备真正的学者思辨高度。</p>
+            </div>
+            <div class="hanging-tag">
+              <div class="tag-label">Price</div>
+              <div class="tag-price">¥ Market Price / 单次续命</div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="service-card">
+            <div class="service-card-body hark-card hark-card--solid hark-card-pad">
+              <h3 class="h2" style="margin-bottom:16px;">申请主线挖掘</h3>
+              <p class="body1 text-secondary" style="max-width:576px;">背景太散、活动太多不知道怎么串联？跟 Mentor 聊一小时，硬生生从里面解构出招生官完全无法拒绝的主线。</p>
+            </div>
+            <div class="hanging-tag">
+              <div class="tag-label">Price</div>
+              <div class="tag-price">¥ 3,200 / 1对1 60min</div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="service-card">
+            <div class="service-card-body hark-card hark-card--solid hark-card-pad">
+              <h3 class="h2" style="margin-bottom:16px;">选课与学分规划</h3>
+              <p class="body1 text-secondary" style="max-width:576px;">让 Mentor 带你硬啃梦校官网的选课空缺、学分转换规则，甚至教你套磁信怎么写才能让教授回复你。</p>
+            </div>
+            <div class="hanging-tag">
+              <div class="tag-label">Price</div>
+              <div class="tag-price">¥ 1,800 / 单次核心咨询</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TIER TWO -->
+        <section id="tier-two">
+          <div class="tier-head tier-head--two">
+            <span class="emoji">🍱</span>
+            <div>
+              <h2 class="h2">TIER TWO</h2>
+              <p class="caption">组合套餐 · 关键战役</p>
+            </div>
+          </div>
+          <!-- Card 1 -->
+          <div class="service-card">
+            <div class="service-card-body hark-card hark-card--solid hark-card-pad">
+              <h3 class="h2" style="margin-bottom:16px;">科研助理 (RA) 抢占计划</h3>
+              <p class="body1 text-secondary" style="max-width:576px;">专治科研经历一片空白。由名校 Mentor 全程带你进行跨校/校内科研精准卡位、教授背景深度解构、以及 1 对 1 导师套磁信撰写策略。</p>
+            </div>
+            <div class="hanging-tag hanging-tag--alt">
+              <div class="tag-label">Price</div>
+              <div class="tag-price">¥ 12,800 / 半年通关</div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="service-card">
+            <div class="service-card-body hark-card hark-card--solid hark-card-pad">
+              <h3 class="h2" style="margin-bottom:16px;">从双非/文理学院冲刺 Top 15</h3>
+              <p class="body1 text-secondary" style="max-width:576px;">跨校转学最折磨人的就是学分转换和时间误差。套餐含：大一夏季选课精准卡位 + 梦校对应学分置换指导 + 转学专属的“My Journey”人文故事重塑。</p>
+            </div>
+            <div class="hanging-tag hanging-tag--alt">
+              <div class="tag-label">Price</div>
+              <div class="tag-price">¥ 28,000 / 战略通关包</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TIER THREE -->
+        <section id="tier-three">
+          <div class="tier-head tier-head--three">
+            <span class="emoji">🍾</span>
+            <div>
+              <h2 class="h2">TIER THREE</h2>
+              <p class="caption">长线全包 · 导师当家</p>
+            </div>
+          </div>
+          <!-- Deluxe Card -->
+          <div class="service-card">
+            <div class="service-card-body service-card-body--wide hark-card hark-card--solid hark-card-pad">
+              <span class="platinum-badge">Platinum Selection</span>
+              <h3 class="h2" style="margin-bottom:16px;">梦校长线全包保驾（全期陪伴）</h3>
+              <p class="body1 text-secondary" style="max-width:576px;">没有任何冷冰冰的 KPI 考核和条条框框，这是由藤校 Mentor 团队全程为你掌勺的申请季。从大一的选课修法、GPA 极限守护、跨校学术资源挖掘，到最后的文书推倒重来与心理状态死磕。</p>
+              <div class="deluxe-chips">
+                <span class="hark-tag">GPA Guard</span>
+                <span class="hark-tag">Global Resources</span>
+                <span class="hark-tag">End-to-End</span>
+              </div>
+            </div>
+            <div class="hanging-tag hanging-tag--xl">
+              <div class="tag-label">Full Premium</div>
+              <div class="tag-price">¥ Custom Quote</div>
+              <div class="tag-sub">全期顶配托付</div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section hark-glass-band" style="margin-top:96px;">
+    <div class="hark-section">
+      <h2 class="h1">Your next chapter, made possible by mentoring</h2>
+      <p class="body1 text-secondary">Join thousands of others and find your ideal mentor today.</p>
+      <a href="platform.html" class="hark-btn hark-btn--primary">Get started</a>
+    </div>
+  </section>
 </main>
-<!-- Footer (Updated from SCREEN_106) -->
-<section class="py-24 bg-white border-y border-gray-100">
-<div class="max-w-4xl mx-auto px-6 text-center">
-<h2 class="text-4xl md:text-5xl font-extrabold text-dark mb-6">Your next chapter, made possible by mentoring</h2>
-<p class="text-xl text-gray-600 mb-10">Join thousands of others and find your ideal mentor today.</p>
-<a href="services.html" class="no-underline"><button class="px-10 py-4 bg-dark text-white text-lg font-bold rounded-xl hover:scale-105 transition-transform">Get started</button></a>
-</div>
-</section>
-<footer class="bg-surface-container-low py-12 px-6 md:px-12 border-t border-outline-variant">
-<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-<div class="flex flex-col gap-2">
-<h2 class="text-2xl font-bold text-on-surface-variant">Mentor Academy</h2>
-<p class="text-sm text-on-surface-variant/70">© Mentor Academy. 版权所有。</p>
-</div>
-<nav class="flex flex-wrap gap-6 md:gap-12">
-<a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="#">服务条款</a>
-<a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="#">隐私政策</a>
-<a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="#">Cookie 政策</a>
-<a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="#">技术支持</a>
-</nav>
-</div>
+
+<!-- ===== 页脚 ===== -->
+<footer class="hark-footer">
+  <div class="hark-footer-inner">
+    <div class="hark-footer-grid">
+      <div>
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px;">
+          <svg fill="none" height="28" viewBox="0 0 32 32" width="28"><circle cx="16" cy="16" r="14" stroke="#F9F9FA" stroke-width="2.5"/><path d="M10 14C10 14 11 12 12.5 12C14 12 15 14 15 14" stroke="#F9F9FA" stroke-linecap="round" stroke-width="2"/><path d="M17 14C17 14 18 12 19.5 12C21 12 22 14 22 14" stroke="#F9F9FA" stroke-linecap="round" stroke-width="2"/><path d="M11 20C11 20 12.5 22.5 16 22.5C19.5 22.5 21 20 21 20" stroke="#F9F9FA" stroke-linecap="round" stroke-width="2.5"/></svg>
+          <span style="font-size:17px;font-weight:600;">过来人Mentor</span>
+        </div>
+        <p class="body2" style="color:var(--text-secondary-on);max-width:280px;">找到最契合你的学长学姐，一个简单的 chat，了解他们的来时路。</p>
+      </div>
+      <div>
+        <h4>导航</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="platform.html">Our Mentors</a></li>
+          <li><a href="services.html">Services</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>资源</h4>
+        <ul>
+          <li><a href="stories.html">Success Stories</a></li>
+          <li><a href="recruit.html">Become a Mentor</a></li>
+          <li><a href="mentors/mia.html">Mentor 详情示例</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>联系</h4>
+        <ul>
+          <li><a href="services.html">Get Started</a></li>
+          <li><span style="color:var(--text-secondary-on);">扫码添加 Founder 微信</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="hark-footer-bottom">
+      <span>© 2026 过来人Mentor. All rights reserved.</span>
+      <span>Get Into Your Dream Schools</span>
+    </div>
+  </div>
 </footer>
+
 <script>
-        // Simple Intersection Observer for SideNav Active State
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('aside nav a');
+  // Scroll-spy：侧边锚点高亮当前 Tier
+  const sections = document.querySelectorAll('.menu-content section[id]');
+  const navLinks = document.querySelectorAll('.tier-sidenav nav a');
 
-        window.addEventListener('scroll', () => {
-            let current = "";
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= (sectionTop - 150)) {
-                    current = section.getAttribute('id');
-                }
-            });
+  window.addEventListener('scroll', () => {
+    let current = "";
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      if (pageYOffset >= (sectionTop - 150)) {
+        current = section.getAttribute('id');
+      }
+    });
 
-            navLinks.forEach(link => {
-                link.classList.remove('text-primary', 'font-bold', 'translate-x-2');
-                link.classList.add('text-outline-variant');
-                if (link.getAttribute('href').includes(current)) {
-                    link.classList.add('text-primary', 'font-bold', 'translate-x-2');
-                    link.classList.remove('text-outline-variant');
-                }
-            });
-        });
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (current && link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+      }
+    });
+  });
 
-        // Add staggered fade-in animations to cards
-        document.querySelectorAll('.service-card').forEach((card, i) => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = `opacity 0.6s ease-out ${i * 0.1}s, transform 0.6s ease-out ${i * 0.1}s`;
-            
-            setTimeout(() => {
-                card.style.opacity = '1';
-                card.style.transform = 'translateY(0)';
-            }, 100);
-        });
-    </script>
+  // 卡片渐入动画
+  document.querySelectorAll('.service-card').forEach((card, i) => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(20px)';
+    card.style.transition = `opacity 0.6s ease-out ${i * 0.1}s, transform 0.6s ease-out ${i * 0.1}s`;
 
-
-</body></html>
+    setTimeout(() => {
+      card.style.opacity = '1';
+      card.style.transform = 'translateY(0)';
+    }, 100);
+  });
+</script>
+<script src="js/nav.js"></script>
+</body>
+</html>
